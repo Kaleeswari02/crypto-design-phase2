@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Navbar wrapper */
+.navbar {
+  @apply flex items-center bg-black py-4 px-6 rounded-full border-2 border-[#2D2D2D];
+}
+body {
+  background-color: #1e1e1e; 
+  margin: 0;
+  font-family: 'Inter', sans-serif; 
+}
+/* Navbar links */
+.nav-link {
+  @apply text-white text-lg font-bold mr-6 hover:text-gray-300 cursor-pointer;
+}
+
+/* Gradient button */
+.gradient-btn {
+  @apply rounded-full px-7 py-3 text-lg font-bold text-[#1E1E1E];
+  background: linear-gradient(270deg, #7928D2 0%, #399FE9 50%, #14F195 100%);
+}
