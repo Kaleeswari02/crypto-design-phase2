@@ -21,3 +21,9 @@ body {
   @apply rounded-full px-7 py-3 text-lg font-bold text-[#1E1E1E];
   background: linear-gradient(270deg, #7928D2 0%, #399FE9 50%, #14F195 100%);
 }
+/* Fonts */
+@font-face {
+  font-family: "Dreiviertelfett";
+  src: url("/fonts/SoehneBreit-Dreiviertelfett.otf") format("opentype");
+   font-display: swap;
+}
