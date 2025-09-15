@@ -7,7 +7,6 @@
   @apply flex items-center bg-black py-4 px-6 rounded-full border-2 border-[#2D2D2D];
 }
 body {
-  background-color: #1e1e1e; 
   margin: 0;
   font-family: 'Inter', sans-serif; 
 }
@@ -26,4 +25,8 @@ body {
   font-family: "Dreiviertelfett";
   src: url("/fonts/SoehneBreit-Dreiviertelfett.otf") format("opentype");
    font-display: swap;
+}
+.stroke-text {
+  -webkit-text-stroke: 1.4px #fff; /* stroke thickness + color */
+  color: transparent;
 }
