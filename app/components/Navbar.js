@@ -17,16 +17,16 @@ export default function HeroNav() {
               alt="Logo"
             />
             <div className="hidden md:flex flex-1 justify-end">
-              <span className="text-white text-lg font-bold mr-6 cursor-pointer">
+              <span className="text-white text-sm  mr-6 cursor-pointer">
                 Features
               </span>
-              <span className="text-white text-lg font-bold mr-6 cursor-pointer">
+              <span className="text-white text-sm  mr-6 cursor-pointer">
                 Application
               </span>
-              <span className="text-white text-lg font-bold mr-6 cursor-pointer">
+              <span className="text-white text-sm  mr-6 cursor-pointer">
                 Game Equip
               </span>
-              <span className="text-white text-lg font-bold mr-6 cursor-pointer">
+              <span className="text-white text-sm  mr-6 cursor-pointer">
                 Blog
               </span>
             </div>
@@ -34,7 +34,7 @@ export default function HeroNav() {
 
           {/* Right: Desktop Button */}
           <button
-            className="hidden md:flex rounded-full px-7 py-3 font-bold text-lg text-[#1E1E1E]"
+            className="hidden md:flex rounded-full px-7 py-3  text-sm text-[#1E1E1E]"
             style={{
               background:
                 "linear-gradient(270deg, #7928D2 0%, #399FE9 50%, #14F195 100%)",
@@ -57,16 +57,16 @@ export default function HeroNav() {
         {isOpen && (
           <div className="md:hidden mt-4 px-6">
             <div className="flex flex-col gap-4 bg-black rounded-2xl p-6 border border-[#2D2D2D]">
-              <span className="text-white text-lg font-bold cursor-pointer">
+              <span className="text-white text-sm font-bold cursor-pointer">
                 Features
               </span>
-              <span className="text-white text-lg font-bold cursor-pointer">
+              <span className="text-white text-sm font-bold cursor-pointer">
                 Application
               </span>
-              <span className="text-white text-lg font-bold cursor-pointer">
+              <span className="text-white text-sm font-bold cursor-pointer">
                 Game Equip
               </span>
-              <span className="text-white text-lg font-bold cursor-pointer">
+              <span className="text-white text-sm font-bold cursor-pointer">
                 Blog
               </span>
               <button

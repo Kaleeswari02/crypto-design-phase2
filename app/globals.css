@@ -7,7 +7,7 @@
   @apply flex items-center bg-black py-4 px-6 rounded-full border-2 border-[#2D2D2D];
 }
 body {
-  background-color: #1e1e1e; 
+  /* background-color: #1e1e1e;  */
   margin: 0;
   font-family: 'Inter', sans-serif; 
 }
@@ -21,3 +21,78 @@ body {
   @apply rounded-full px-7 py-3 text-lg font-bold text-[#1E1E1E];
   background: linear-gradient(270deg, #7928D2 0%, #399FE9 50%, #14F195 100%);
 }
+/* Define custom properties */
+.image-hero-circle{
+  border-radius: 50%;
+  width: 100%;
+}
+.hero-ic-image{
+  padding: 5%;
+  margin: 5%;
+  width:10px;
+  height: 100px;
+}
+.movingdrop{
+  border-radius: 50% 50% 0 ; 
+ 
+  
+}
+@keyframes dropBurst {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dropReturn {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+.scroll-bg-icons-green{
+ background-color: #28d2b0;
+ width: 250px;
+ height: 250px;
+ border-radius: 50%;
+ display: flex;
+justify-content: center;
+align-items: center;
+transform: rotate(50deg);
+}
+.scroll-bg-icons-purple{
+  background-color: #7a28d3;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ transform: rotate(60deg);
+ }
+ .scroll-bg-icons-blue{
+  background-color: #399fea;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ transform: rotate(60deg);
+ }
+ .scroll-icon-position{
+  /* transform: rotate(297deg); */
+ }
