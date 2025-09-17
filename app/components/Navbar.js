@@ -1,88 +1,67 @@
-"use client";
 import React, { useState } from "react";
-
+import { FiMenu, FiX } from "react-icons/fi";
+import GradientButton from "./GradientButton"; // import reusable button
+ 
 export default function HeroNav() {
   const [isOpen, setIsOpen] = useState(false);
-
+ 
   return (
-    <div className="bg-white">
-      <div className="bg-[#1E1E1E] pt-6">
-        {/* Navbar */}
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-6 px-6">
-          {/* Left: Logo + Links */}
-          <div className="flex flex-1 items-center bg-black py-4 px-6 rounded-full border-2 border-[#2D2D2D]">
-            <img
-              src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/wdbxHpkCoL/bfqkpvla_expires_30_days.png"
-              className="w-[196px] h-[30px] object-contain"
-              alt="Logo"
-            />
-            <div className="hidden md:flex flex-1 justify-end">
-              <span className="text-white text-sm  mr-6 cursor-pointer">
-                Features
-              </span>
-              <span className="text-white text-sm  mr-6 cursor-pointer">
-                Application
-              </span>
-              <span className="text-white text-sm  mr-6 cursor-pointer">
-                Game Equip
-              </span>
-              <span className="text-white text-sm  mr-6 cursor-pointer">
-                Blog
-              </span>
-            </div>
+    <div>
+      {/* Centered container */}
+      <div className="flex justify-between items-center px-6 py-6 md:justify-center">
+        {/* Left: Logo + Links inside pill */}
+        <div className="flex items-center bg-black py-2 px-4 md:py-3 md:px-5 lg:py-4 lg:px-6 rounded-full border-2 border-[#2D2D2D]">
+          <img
+            src="assets/logo.webp"
+            className="w-[120px] md:w-[160px] lg:w-[196px] h-[28px] md:h-[30px] object-contain miniTablet:w-[120px]"
+            alt="Logo"
+          />
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center gap-8 font-dreiviertelfett text-[16px] miniTablet:text-[12px] font-[700] ml-8">
+            <span className="text-white cursor-pointer">Features</span>
+            <span className="text-white cursor-pointer">Application</span>
+            <span className="text-white cursor-pointer">Game Equip</span>
+            <span className="text-white cursor-pointer">Blog</span>
           </div>
-
-          {/* Right: Desktop Button */}
-          <button
-            className="hidden md:flex rounded-full px-7 py-3  text-sm text-[#1E1E1E]"
-            style={{
-              background:
-                "linear-gradient(270deg, #7928D2 0%, #399FE9 50%, #14F195 100%)",
-            }}
-            onClick={() => alert("Pressed!")}
-          >
-            Connect Wallet
-          </button>
-
-          {/* Hamburger Mobile */}
-          <button
-            className="md:hidden text-white text-2xl ml-4"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            ☰
-          </button>
         </div>
-
-        {/* Mobile Dropdown */}
-        {isOpen && (
-          <div className="md:hidden mt-4 px-6">
-            <div className="flex flex-col gap-4 bg-black rounded-2xl p-6 border border-[#2D2D2D]">
-              <span className="text-white text-sm font-bold cursor-pointer">
-                Features
-              </span>
-              <span className="text-white text-sm font-bold cursor-pointer">
-                Application
-              </span>
-              <span className="text-white text-sm font-bold cursor-pointer">
-                Game Equip
-              </span>
-              <span className="text-white text-sm font-bold cursor-pointer">
-                Blog
-              </span>
-              <button
-                className="w-full rounded-full px-7 py-3 font-bold text-lg text-[#1E1E1E]"
-                style={{
-                  background:
-                    "linear-gradient(270deg, #7928D2 0%, #399FE9 50%, #14F195 100%)",
-                }}
-                onClick={() => alert("Pressed!")}
-              >
-                Connect Wallet
-              </button>
-            </div>
-          </div>
-        )}
+ 
+        {/* Right: Desktop Button */}
+        <div className="hidden md:flex ml-6">
+          <GradientButton
+            label="Connect Wallet"
+            onClick={() => alert("Pressed!")}
+          />
+        </div>
+ 
+        {/* Mobile Hamburger / Close Button */}
+        <button
+          className="md:hidden flex items-center justify-center w-11 h-11 bg-black border border-[#2D2D2D] rounded-full text-white ml-4"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <FiX size={22} /> : <FiMenu size={22} />}
+        </button>
       </div>
+ 
+      {/* Mobile Dropdown */}
+      {isOpen && (
+        <div className="md:hidden mt-2 px-6 pb-6">
+          <div className="flex flex-col gap-4 bg-black rounded-2xl p-6 border border-[#2D2D2D] font-dreiviertelfett text-[16px] font-[700]">
+            <span className="text-white cursor-pointer">Features</span>
+            <span className="text-white cursor-pointer">Application</span>
+            <span className="text-white cursor-pointer">Game Equip</span>
+            <span className="text-white cursor-pointer">Blog</span>
+ 
+            {/* Mobile Button (same component) */}
+            <GradientButton
+              label="Connect Wallet"
+              onClick={() => alert("Pressed!")}
+              className="w-full"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
+ 
+ 

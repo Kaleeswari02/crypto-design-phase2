@@ -96,3 +96,13 @@ transform: rotate(50deg);
  .scroll-icon-position{
   /* transform: rotate(297deg); */
  }
+/* Fonts */
+@font-face {
+  font-family: "Dreiviertelfett";
+  src: url("/fonts/SoehneBreit-Dreiviertelfett.otf") format("opentype");
+   font-display: swap;
+}
+.stroke-text {
+  -webkit-text-stroke: 1.4px #fff; /* stroke thickness + color */
+  color: transparent;
+}
