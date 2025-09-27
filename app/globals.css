@@ -26,7 +26,72 @@ body {
   src: url("/fonts/SoehneBreit-Dreiviertelfett.otf") format("opentype");
    font-display: swap;
 }
+@font-face {
+  font-family: "ExtrafettKursiv";
+  src: url("/fonts/SoehneBreit-ExtrafettKursiv.otf") format("opentype");
+   font-display: swap;
+}
+@font-face {
+  font-family: "Kraeftig";
+  src: url("/fonts/Soehne-Kraeftig.otf") format("opentype");
+   font-display: swap;
+}
+@font-face {
+  font-family: "Extrafett";
+  src: url("/fonts/Soehne-Extrafett.otf") format("opentype");
+   font-display: swap;
+}
+@font-face {
+  font-family: "Buch";
+  src: url("/fonts/SoehneBreit-Buch.otf") format("opentype");
+   font-display: swap;
+}
+@font-face {
+  font-family: "Halbfett";
+  src: url("/fonts/SoehneBreit-Halbfett.otf") format("opentype");
+   font-display: swap;
+}
 .stroke-text {
   -webkit-text-stroke: 1.4px #fff; /* stroke thickness + color */
   color: transparent;
+}
+ @keyframes draw-square {
+      0% {
+        stroke-dasharray: 0 400;
+      }
+      100% {
+        stroke-dasharray: 400 0;
+      }
+    }
+
+    .animate-draw {
+      stroke-dasharray: 400;
+      stroke-dashoffset: 400;
+      animation: draw-square 2s forwards;
+    }
+
+
+ .loaderBg {
+  background-color: #3D065E;
+ }
+
+ .subtitle {
+  font-weight: bold;
+  font-size: 28px;
+ }
+
+ .remove_scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Chrome, Safari, Opera */
+.remove_scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.shadowed {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }
