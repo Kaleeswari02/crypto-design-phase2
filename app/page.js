@@ -1,9 +1,6 @@
 'use client';
-
 import Link from 'next/link';
-
 import HeroSection from './sections/HeroSection';
-import Iconscroll from './sections/iconscroll';
 import React from "react";
 import { useSelector } from "react-redux";
 import HeroNav from "./components/Navbar";
@@ -23,28 +20,20 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-
-      
     <div className="relative min-h-screen">
-      {/* Navbar floating above video */}
       <div className="fixed top-0 left-0 w-full z-[9999]">
-        {/* <HeroNav /> */}
+        <HeroNav />
       </div>
-{/* 
+      <HeroSection/> 
+      <PreIconTransition/> 
       <VideoSection />
       <FeatureCard/>
-      <ReferEarnSection/>     
-      <OurProductsSection/>
-      <BlogCommunityTabs/> */}
-      <Footer/>
-      <HeroSection/> 
-      {/* <Iconscroll/>   */}
-      <PreIconTransition/> 
-      {/* Video Background Section */}
-      {/* <VideoSection /> */}
-      <FitnessAppSection/>
       <DownloadSection/>
       <CoinStokSection/>
+      <ReferEarnSection/>   
+      <OurProductsSection/>
+      <BlogCommunityTabs/>
+      <Footer/>
     </div>
     </div>
   );
