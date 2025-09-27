@@ -14,8 +14,8 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.1",
     "bcryptjs": "^2.4.3",
+    "framer-motion": "^12.23.14",
     "gsap": "^3.13.0",
-    "framer-motion": "^12.23.12",
     "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.2",
     "next": "15.1.8",

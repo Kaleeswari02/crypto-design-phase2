@@ -61,7 +61,7 @@ export default function AnimatedIconsPage() {
     <img
       src="/play.webp"
       alt="Play"
-      className={`object-contain opacity-90 transform transition-all duration-500 ease-out ${
+      className={`object-contain image-center-place opacity-90 transform transition-all duration-500 ease-out ${
         hoveredIndex === iconIndex ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'
       }`}
     />
@@ -70,7 +70,7 @@ export default function AnimatedIconsPage() {
     <img
       src="/run.webp"
       alt="Run"
-      className={`object-contain opacity-90 transform transition-all duration-500 ease-out ${
+      className={`object-contain image-center-place opacity-90 transform transition-all duration-500 ease-out ${
         hoveredIndex === iconIndex ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'
       }`}
     />
@@ -79,7 +79,7 @@ export default function AnimatedIconsPage() {
     <img
       src="/earn.webp"
       alt="Earn"
-      className={`object-contain opacity-90 transform transition-all duration-500 ease-out ${
+      className={`object-contain image-center-place opacity-90 transform transition-all duration-500 ease-out ${
         hoveredIndex === iconIndex ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'
       }`}
     />

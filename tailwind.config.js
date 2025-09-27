@@ -21,6 +21,12 @@ module.exports = {
       screens: {
         miniTablet: { min: '768px', max: '1023px' },
       },
+      boxShadow: {
+        'coin-shadow': '0 4px 10px rgba(0, 255, 0, 0.4)', // Greenish shadow for the center coin
+      },
+      animation: {
+        'spin': 'spin 10s linear infinite', // Continuous spin animation for the rotating coins
+      },
     },
   },
   plugins: [],

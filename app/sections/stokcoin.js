@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 
-const Iconscroll = () => {
+const CoinStokSection = () => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -33,37 +33,39 @@ const Iconscroll = () => {
                 </div>
               </div>
         {/* Central STOK Coin */}
-<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 y-0">
-  <div className="rounded-full stockCoinShape flex items-center justify-center">
-    <img src="/assets/stok.webp" alt="stok.webp" className="stockCoinShape" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 ">
+  <div className="rounded-full stockCoinShape flex  center-coin">
+    <img src="/assets/stok.webp" alt="stok.webp" className="" />
   </div>
 </div>
 
+
 {/* Orbiting Coins */}
-<div className="absolute spinner-layer inset-0">
+<div className={`absolute spinner-layer inset-0 ${mounted ? 'animate-spin-trigger' : ''}`}>
   {orbitingCoins.map((coin, index) => {
-    const angle = (index / orbitingCoins.length) * 360;
+    const angle = (index / 7) * 360;
     const radians = (angle * Math.PI) / 180;
-    const radius = 280;
+    const radius = 275;
     const x = Math.cos(radians) * radius;
     const y = Math.sin(radians) * radius;
 
     return (
       <div
         key={coin.id}
-        className="absolute top-1/2 left-1/2 orbiting-coin-inner"
+        className="absolute top-1/2 left-1/2 z-50"
         style={{
           transform: `translate(${x}px, ${y}px) translate(-50%, -50%)`,
         }}
       >
-        <div className="w-40 h-40 flex items-center justify-center">
-          <img src={coin.image} alt="coin" />
+        <div className="w-40 h-40 flex items-center justify-center transform hover:scale-110 transition-transform">
+          <div className="text-white text-xl font-bold rotatingCoin">
+            <img src={coin.image} alt="rotatingcoin" />
+          </div>
         </div>
       </div>
     );
   })}
 </div>
-
 
             </div>
           </div>
@@ -129,4 +131,4 @@ const Iconscroll = () => {
   );
 };
 
-export default Iconscroll;
+export default CoinStokSection;
