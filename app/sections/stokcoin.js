@@ -7,7 +7,13 @@ const CoinStokSection = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
+  // const [isAboveCenter, setIsAboveCenter] = useState(false);
 
+  // useEffect(() => {
+  //   // Simulating coin movement. In a real scenario, you can replace it with your animation logic.
+  //   setTimeout(() => setIsAboveCenter(true), 2000); // After 2 seconds, the coin will move above the center.
+  //   setTimeout(() => setIsAboveCenter(false), 4000); // After 4 seconds, it will move below the center again.
+  // }, []);
   // Sample coin icons - replace with your actual icons
   const orbitingCoins = [
     { id: 1, image: '/assets/rotateicon1.webp', },
@@ -33,11 +39,11 @@ const CoinStokSection = () => {
                 </div>
               </div>
         {/* Central STOK Coin */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 ">
-  <div className="rounded-full stockCoinShape flex  center-coin">
-    <img src="/assets/stok.webp" alt="stok.webp" className="" />
-  </div>
-</div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 centerCoinindex ">
+            <div className="rounded-full stockCoinShape flex center-coin">
+              <img src="/assets/stok.webp" alt="stok.webp" />
+            </div>
+        </div>
 
 
 {/* Orbiting Coins */}
@@ -45,24 +51,26 @@ const CoinStokSection = () => {
   {orbitingCoins.map((coin, index) => {
     const angle = (index / 7) * 360;
     const radians = (angle * Math.PI) / 180;
-    const radius = 275;
+    const radius = 285;
     const x = Math.cos(radians) * radius;
     const y = Math.sin(radians) * radius;
 
     return (
-      <div
-        key={coin.id}
-        className="absolute top-1/2 left-1/2 z-50"
-        style={{
-          transform: `translate(${x}px, ${y}px) translate(-50%, -50%)`,
-        }}
-      >
-        <div className="w-40 h-40 flex items-center justify-center transform hover:scale-110 transition-transform">
-          <div className="text-white text-xl font-bold rotatingCoin">
-            <img src={coin.image} alt="rotatingcoin" />
-          </div>
-        </div>
-      </div>
+<div
+  key={coin.id}
+  className="absolute top-1/2 left-1/2 rotatingcoinindex"
+  style={{
+    transform: `translate(${x}px, ${y}px) translate(-50%, -50%)`,
+    zIndex: -12, /* Ensure they are behind the central coin */
+  }}
+>
+  <div className="w-40 h-40 flex items-center justify-center transform hover:scale-110 transition-transform ">
+    <div className="text-white text-xl font-bold rotatingCoin">
+      <img src={coin.image} alt="rotatingcoin" className='rotatingcoinindex'/>
+    </div>
+  </div>
+</div>
+
     );
   })}
 </div>
@@ -86,7 +94,7 @@ const CoinStokSection = () => {
               {/* Play Icon */}
               <div className="text-center mt-10">
                 <div className="w-16 h-16 rounded-full bg-[#28d1af] flex items-center justify-center mb-2 ">
-                   <img src='/play.webp' alt='play' className='stockIconsize'/>
+                   <img src='/assets/play.webp' alt='play' className='stockIconsize'/>
                 </div>
                 <p className="text-gray-400 text-sm icontextfont">PLAY</p>
               </div>
@@ -94,7 +102,7 @@ const CoinStokSection = () => {
               {/* Run Icon */}
               <div className="text-center mt-10">
                 <div className="w-16 h-16 rounded-full bg-[#7a28d3] flex items-center justify-center mb-2 ">
-                  <img src='/run.webp' alt='run' className='stockIconsize'/>
+                  <img src='/assets/run.webp' alt='run' className='stockIconsize'/>
                 </div>
                 <p className="text-gray-400 text-sm icontextfont">RUN</p>
               </div>
@@ -102,7 +110,7 @@ const CoinStokSection = () => {
               {/* Earn Icon */}
               <div className="text-center mt-10">
                 <div className="w-16 h-16 rounded-full bg-[#3a9fea] flex items-center justify-center mb-2 ">
-                    <img src='/earn.webp' alt='earn' className='stockIconsize'/>
+                    <img src='/assets/earn.webp' alt='earn' className='stockIconsize'/>
                 </div>
                 <p className="text-gray-400 text-sm icontextfont">EARN</p>
               </div>

@@ -14,7 +14,9 @@ import PreIconTransition from './sections/scrolltrig';
 import FitnessAppSection from './sections/mobilescroll';
 import DownloadSection from './sections/mobileapp';
 import CoinStokSection from './sections/stokcoin';
-
+import FitnessAndIconsPage from './sections/mobilescroll';
+import CoinStokSectionone from './sections/iconscroll';
+// import FixedFooter from './sections/fixedfooter';
 export default function Home() {
   const { isAuthenticated } = useSelector((state) => state.auth);
 
@@ -28,12 +30,16 @@ export default function Home() {
       <PreIconTransition/> 
       <VideoSection />
       <FeatureCard/>
+      <FitnessAndIconsPage/>
       <DownloadSection/>
       <CoinStokSection/>
       <ReferEarnSection/>   
       <OurProductsSection/>
       <BlogCommunityTabs/>
+      {/* <CoinStokSectionone/> */}
       <Footer/>
+      {/* <FixedFooter/> */}
+
     </div>
     </div>
   );

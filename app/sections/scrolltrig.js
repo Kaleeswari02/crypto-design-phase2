@@ -101,7 +101,7 @@ const PreIconTransition = () => {
     { bgColor: "#3a9fea" },
   ];
 
-  const iconImgs = ["/play.webp", "/run.webp", "/earn.webp"];
+  const iconImgs = ["/assets/play.webp", "/assets/run.webp", "/assets/earn.webp"];
   const iconTitles = ["Play", "Run", "Earn"];
 
   return (
@@ -131,7 +131,8 @@ const PreIconTransition = () => {
                   <img
                     src={iconImgs[i]}
                     alt={`icon-${i}`}
-                    style={{ width: 156, height: 156, objectFit: "contain" }}
+                    style={{ width: 145, height: 145, objectFit: "contain" }}
+                    className="TransformIcon"
                   />
                 </div>
                 {/* Icon Title */}

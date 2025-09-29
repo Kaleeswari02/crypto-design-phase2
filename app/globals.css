@@ -34,9 +34,10 @@ body {
 }
 .movingdrop{
   border-radius: 50% 50% 0 ; 
- 
-  
 }
+/* .image-center-place {
+  width: 190px;
+} */
 @keyframes dropBurst {
   0% {
     opacity: 0;
@@ -474,14 +475,34 @@ transform: rotate(50deg);
 }
 
 .center-coin {
-  animation: move-left-right 7s ease-in-out infinite; /* Slow left-right movement with ease */
+  z-index: 2; /* Higher z-index so it stays in front */
+  animation: move-left-right 6s ease-in-out infinite; /* Slow left-right movement with ease */
 }
 
 .spinner-layer{
   position: absolute;
-  bottom: 4vh;
+  bottom: 1vh;
   left: 2vw;
- 
+  z-index: 1; /* Lower z-index so they stay behind the center coin */
   transform-style: preserve-3d;
   perspective: 1000px;
+}
+.earn-img{
+  width: 60%;
+  position: relative;
+  bottom: 14%;
+  right: 2%;
+}
+.TransformIcon{
+  position: relative;
+  bottom: 1%;
+  right: 2%;
+}
+/* testing */
+.centerCoinindex{
+  z-index: 0;
+
+}
+.rotatingcoinindex{
+  z-index: -1;
 }
