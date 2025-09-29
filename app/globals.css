@@ -126,8 +126,6 @@ transform: rotate(50deg);
 @font-face {
   font-family: "Halbfett";
   src: url("/fonts/SoehneBreit-Halbfett.otf") format("opentype");
-  font-family: "Buch";
-  src: url("/fonts/So-êhneBreit-Buch.otf") format("opentype");
    font-display: swap;
 }
 @font-face {
