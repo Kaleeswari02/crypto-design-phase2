@@ -11,6 +11,9 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif; 
 }
+.pin-spacer{
+  background: #1e1e1e !important;
+}
 /* Navbar links */
 .nav-link {
   @apply text-white text-lg font-bold mr-6 hover:text-gray-300 cursor-pointer;
@@ -504,3 +507,39 @@ transform: rotate(50deg);
 .rotatingcoinindex{
   z-index: -1;
 }
+@keyframes clip-path-reveal {
+  0%, 25% { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); }
+  50% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+}
+
+.animated-title {
+  display: inline-block;
+  overflow: hidden;
+  animation: clip-path-reveal 2s ease forwards;
+}
+
+
+/* big-title letter reveal (rotateX wake-up) */
+.big-title {
+  display: inline-block;
+  perspective: 800px;
+  transform-style: preserve-3d;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* each character */
+.big-title .letter {
+  display: inline-block;
+  transform-origin: bottom;
+  backface-visibility: hidden; /* prevents flicker during 3D rotate */
+  will-change: transform, opacity;
+}
+
+/* small gap for spaces (optional) */
+.big-title .letter.space {
+  display: inline-block;
+  width: 0.35em;
+}
+
