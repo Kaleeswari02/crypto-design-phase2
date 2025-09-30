@@ -58,7 +58,7 @@ const CoinStokSection = () => {
     return (
 <div
   key={coin.id}
-  className="absolute top-1/2 left-1/2 rotatingcoinindex"
+  className="absolute top-1/2 left-1/2 rotatingcoinindex "
   style={{
     transform: `translate(${x}px, ${y}px) translate(-50%, -50%)`,
     zIndex: -12, /* Ensure they are behind the central coin */
@@ -66,7 +66,7 @@ const CoinStokSection = () => {
 >
   <div className="w-40 h-40 flex items-center justify-center transform hover:scale-110 transition-transform ">
     <div className="text-white text-xl font-bold rotatingCoin">
-      <img src={coin.image} alt="rotatingcoin" className='rotatingcoinindex'/>
+      <img src={coin.image} alt="rotatingcoin" className='rotatingcoinindex  '/>
     </div>
   </div>
 </div>
@@ -132,9 +132,10 @@ const CoinStokSection = () => {
         </div>
       </div>
       <div className='glassRec'>
-                  <img src='/assets/glassrec.webp' alt=''/>
-                </div>
-    
+          <img src='/assets/glassrec.webp' alt=''/>
+      </div>
+
+  
     </div>
   );
 };
