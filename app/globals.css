@@ -543,3 +543,11 @@ transform: rotate(50deg);
   width: 0.35em;
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.meta-animate-fadeIn {
+  animation: fadeIn 0.8s ease forwards;
+}
