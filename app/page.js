@@ -16,7 +16,7 @@ import DownloadSection from './sections/mobileapp';
 import CoinStokSection from './sections/stokcoin';
 import FitnessAndIconsPage from './sections/mobilescroll';
 import CoinStokSectionone from './sections/iconscroll';
-// import FixedFooter from './sections/fixedfooter';
+import FixedFooter from './sections/fixedfooter';
 export default function Home() {
   const { isAuthenticated } = useSelector((state) => state.auth);
 
@@ -33,12 +33,12 @@ export default function Home() {
       <FitnessAndIconsPage/>
       <DownloadSection/>
       <CoinStokSection/>
-      <ReferEarnSection/>   
+      {/* <ReferEarnSection/>   
       <OurProductsSection/>
-      <BlogCommunityTabs/>
+      <BlogCommunityTabs/> */}
       {/* <CoinStokSectionone/> */}
       <Footer/>
-      {/* <FixedFooter/> */}
+      <FixedFooter/>
 
     </div>
     </div>

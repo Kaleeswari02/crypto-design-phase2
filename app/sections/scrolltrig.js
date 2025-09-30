@@ -65,8 +65,8 @@ const PreIconTransition = () => {
 
     const inlineOffsets = [
       { x: -320, y: 800 },
-      { x: -100, y: 890 },
-      { x: 120, y: 950 },
+      { x: -100, y: 870 },
+      { x: 120, y: 940 },
     ];
 
     const xCross = lerp(xPhase2, inlineOffsets[index].x, nextAmount);
