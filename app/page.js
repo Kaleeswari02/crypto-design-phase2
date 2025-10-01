@@ -17,6 +17,7 @@ import CoinStokSection from './sections/stokcoin';
 import FitnessAndIconsPage from './sections/mobilescroll';
 import CoinStokSectionone from './sections/iconscroll';
 import FixedFooter from './sections/fixedfooter';
+import StokSpinSection from './sections/StokSpinSection'
 export default function Home() {
   const { isAuthenticated } = useSelector((state) => state.auth);
 
@@ -27,6 +28,7 @@ export default function Home() {
         <HeroNav />
       </div>
       <HeroSection/> 
+      <StokSpinSection/>
       <PreIconTransition/> 
       <VideoSection />
       <FeatureCard/>

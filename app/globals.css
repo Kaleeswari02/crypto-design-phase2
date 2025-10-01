@@ -266,22 +266,13 @@ transform: rotate(50deg);
   position: relative;
   left: 10px;
 }
-.stockCoinShape::before{
-  content: '';
-  background-color: #19503a;
-  box-shadow: 10px 10px 138px 75px #1c5a40;  
-  border: none !important;
-  outline: none;
-  background-size: cover;
 
-}
 .backgroundgreen{
   background-image: url('/assets/coinshadow.webp');
   background-size: cover;
   background-position: right center;
   height: 800px;
-  background-repeat: no-repeat;
-
+  background-repeat: no-repeat
   
 }
 .rightSidecontent {
@@ -314,10 +305,18 @@ transform: rotate(50deg);
   width: 40px;
   height: 40px;
 }
-.glasssquare{
+/* .glasssquare{
   position: relative;
   bottom: 5vh;
   right: 3vh;
+} */
+ .glasssquare {
+  position: absolute;       /* absolute inside a relative parent */
+  top: 10%;                 /* distance from top of parent */
+  right: 5%;                /* distance from right of parent */
+  width: 120px;             /* adjust as needed */
+  height: auto;
+  z-index: 10;              /* ensure it floats above background but below coins if needed */
 }
 .stockDes{
   text-align: center;
@@ -335,17 +334,10 @@ transform: rotate(50deg);
   color: #fff;
   font-family: "ExtrafettKursiv";
 }
-.stocksmallicons{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 28px;
-  position: relative;
-  left: 15%;
-}
+
 .glassRec{
   position: absolute;
-  right: 1%;
+  right: 0%;
   bottom: -12vh;
 }
 @keyframes orbit-move {
@@ -640,3 +632,22 @@ transform: rotate(50deg);
   top: 2%;
   left: 15%;
 } */
+
+
+/* Each orbit wrapper rotates around center */
+@keyframes rotateOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orbitWrapper {
+  width: 0;
+  height: 0;
+  animation: rotateOrbit 10s linear infinite;
+  transform-origin: center center;
+}
+
