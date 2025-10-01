@@ -621,6 +621,22 @@ transform: rotate(50deg);
   100% { opacity: 1; transform: translateY(0); }
 }
 
-.meta-animate-fadeIn {
+/* .meta-animate-fadeIn {
   animation: fadeIn 0.8s ease forwards;
 }
+.featurecardhover:hover{
+  padding-bottom: 5%;
+}
+.centercardHover{
+  background-color: red;
+  height: 500px;
+}
+.centercardHover:hover{
+  background-color: green;
+  height: 600px;
+}
+.smallicons{
+  position: relative;
+  top: 2%;
+  left: 15%;
+} */

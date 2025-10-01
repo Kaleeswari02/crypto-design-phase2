@@ -48,11 +48,11 @@ export const CardHoverAnimation = () => {
                 ease: "back.out"
             })
 
-            gsap.to(".purple_card", {
-                height: "250%",
-                duration: 0.5,
-                ease: 'back'
-            })
+            // gsap.to(".purple_card", {
+            //     height: "250%",
+            //     duration: 0.5,
+            //     ease: 'back'
+            // })
 
            
         },
@@ -88,11 +88,11 @@ export const CardHoverAnimation = () => {
                 color: "var(--purple-lighter)",
                 backgroundColor: "var(--purple-light)",
             })
-            gsap.to(".purple_card", {
-                height: "100%",
-                duration: 0.5,
-                ease: 'back'
-            })
+            // gsap.to(".purple_card", {
+            //     height: "150%",
+            //     duration: 0.5,
+            //     ease: 'back'
+            // })
 
             gsap.to(".payusdc", {
                 opacity: 0,
