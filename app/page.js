@@ -11,11 +11,8 @@ import {OurProductsSection} from './sections/OurProductsSection'
 import BlogCommunityTabs from './sections/BlogCommunityTabs'
 import Footer from "./components/Footer";
 import PreIconTransition from './sections/scrolltrig';
-import FitnessAppSection from './sections/mobilescroll';
 import DownloadSection from './sections/mobileapp';
-import CoinStokSection from './sections/stokcoin';
 import FitnessAndIconsPage from './sections/mobilescroll';
-import CoinStokSectionone from './sections/iconscroll';
 import FixedFooter from './sections/fixedfooter';
 import StokSpinSection from './sections/StokSpinSection'
 export default function Home() {
@@ -28,17 +25,15 @@ export default function Home() {
         <HeroNav />
       </div>
       <HeroSection/> 
-      <StokSpinSection/>
       <PreIconTransition/> 
       <VideoSection />
       <FeatureCard/>
       {/* <FitnessAndIconsPage/> */}
       <DownloadSection/>
-      <CoinStokSection/>
-      {/* <ReferEarnSection/>   
+      <StokSpinSection/>
+      <ReferEarnSection/>  
       <OurProductsSection/>
-      <BlogCommunityTabs/> */}
-      {/* <CoinStokSectionone/> */}
+      <BlogCommunityTabs/>
       <Footer/>
       <FixedFooter/>
 
