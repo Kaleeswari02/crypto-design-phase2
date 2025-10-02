@@ -121,7 +121,8 @@ const renderCard = (card) => (
     {/* Left image */}
     <Image
       src={card.image}
-      width={278} height={338}
+      width={278}
+      height={338}
       className="w-[278px] h-[338px] rounded-[10px] object-cover"
     />
 

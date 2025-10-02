@@ -4,8 +4,8 @@ import HeroNav from '../components/Navbar';
 
 export default function BlogPage() {
   return (
-    <div className='bg-lightdark'>
-      <HeroNav/>
+    <div className="bg-lightdark">
+      <HeroNav />
       <div className="flex flex-col bg-lightdark">
         <div className="self-stretch bg-lightdark h-[1120px]">
           <div className="flex flex-col items-start self-stretch bg-lightdark pt-[45px]">
@@ -28,7 +28,8 @@ export default function BlogPage() {
                 <Image
                   src="/assets/share-icon.png"
                   className="w-14  object-fill"
-                  width={48} height={48}
+                  width={48}
+                  height={48}
                 />
               </button>
               <button
@@ -38,16 +39,17 @@ export default function BlogPage() {
                 <Image
                   src="/assets/copylink-icon.png"
                   className="w-14 object-fill"
-                                    width={48} height={48}
-
+                  width={48}
+                  height={48}
                 />
               </button>
             </div>
             <span className="text-white text-[46px] font-halbfett  w-[717px] mb-[55px] ml-[220px]">
               Lorem ipsum dolor sit amet, consectetur...
             </span>
-            <Image                   width={1100} height={480}
-
+            <Image
+              width={1100}
+              height={480}
               src="/assets/blog-banner.png"
               className="self-stretch h-[480px] mb-5 mx-[220px] object-fill"
             />

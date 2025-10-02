@@ -158,7 +158,8 @@ export default function FitnessAndIconsPage() {
             <Image
               src="/assets/iPhone 16.webp"
               alt="Mobile App"
-              width={500} height={755}
+              width={500}
+              height={755}
               className="w-[500px] drop-shadow-2xl"
             />
           </div>

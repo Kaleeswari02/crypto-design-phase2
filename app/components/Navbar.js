@@ -12,8 +12,8 @@ export default function HeroNav() {
       <div className="flex justify-between items-center px-6 py-6 md:justify-center">
         {/* Left: Logo + Links inside pill */}
         <div className="flex items-center bg-black py-2 px-4 md:py-3 md:px-5 lg:py-4 lg:px-6 rounded-full border-2 border-[#2D2D2D]">
-         <Image
-            src="/assets/logo.webp"   
+          <Image
+            src="/assets/logo.webp"
             alt="Logo"
             width={120}
             height={28}

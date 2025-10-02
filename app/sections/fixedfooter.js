@@ -72,7 +72,7 @@ export default function FooterIcons() {
               className="w-16 h-16 rounded-full flex items-center justify-center text-black transform transition-all duration-250 group-hover:scale-90"
               style={{ backgroundColor: it.bg }}
             >
-              <Image src={it.icon} alt={it.label}  width={22} height={22}/>
+              <Image src={it.icon} alt={it.label} width={22} height={22} />
             </div>
 
             {/* Label */}

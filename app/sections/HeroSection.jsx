@@ -104,7 +104,7 @@ export default function HeroSection() {
                 <Image
                   src="/assets/run.webp"
                   alt="Run"
-                    width={40}
+                  width={40}
                   height={40}
                   className={`object-contain run-img image-center-place opacity-90 transform transition-all duration-500 ease-out ${
                     hoveredIndex === iconIndex

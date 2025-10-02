@@ -147,7 +147,9 @@ const renderCard = (card, router) => (
     className="cursor-pointer flex bg-black rounded-[20px] overflow-hidden w-[620px] p-[12px] blog-card"
   >
     <Image
-      src={card.image} width={278} height={338}
+      src={card.image}
+      width={278}
+      height={338}
       className="w-[278px] h-[338px] rounded-[10px] object-cover"
     />
     <div className="flex flex-col gap-4 justify-between w-full p-[14px]">

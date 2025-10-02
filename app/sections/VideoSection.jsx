@@ -127,8 +127,8 @@ export const VideoSection = () => {
               <Image
                 src="/assets/left-shadow.png"
                 alt="Shadow"
-               width={671}
-               height={646}
+                width={671}
+                height={646}
                 className="absolute top-0 left-0 z-20 pointer-events-none"
               />
 
@@ -145,14 +145,14 @@ export const VideoSection = () => {
                   variants={leftVariants}
                 >
                   <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-4">
-                   <Image
-                    src={slide.icon}
-                    alt="Slide icon"
-                    width={86}   // required numeric value
-                    height={86}  // required numeric value
-                    className="w-[86px] object-contain"
-                  />
-                                      <div className="flex flex-col space-y-4">
+                    <Image
+                      src={slide.icon}
+                      alt="Slide icon"
+                      width={86} // required numeric value
+                      height={86} // required numeric value
+                      className="w-[86px] object-contain"
+                    />
+                    <div className="flex flex-col space-y-4">
                       <h2 className="text-[18px] sm:text-[20px] md:text-[20px] font-dreiviertelfett leading-snug">
                         {slide.title}
                       </h2>
@@ -180,7 +180,7 @@ export const VideoSection = () => {
                     src={slide.phone}
                     alt="Phone mockup"
                     width={386}
-                      height={563}
+                    height={563}
                     className="w-[220px] sm:w-[280px] md:w-[360px] lg:w-[420px]  object-contain"
                   />
                 </div>

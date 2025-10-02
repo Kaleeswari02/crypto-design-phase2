@@ -37,7 +37,7 @@ const FeatureCard = () => {
                   src="/assets/feature-icon1.png"
                   className="w-[150px] h-[164px] object-contain"
                   alt="staking"
-                   width={150}
+                  width={150}
                   height={164}
                 />
               </div>
@@ -95,8 +95,8 @@ const FeatureCard = () => {
                     src="/assets/purple-card.png"
                     alt="Purple Card"
                     className="w-auto h-full  object-cover purple_card rounded-[30px] "
-                     width={357}
-                  height={500}
+                    width={357}
+                    height={500}
                   />
 
                   {/* Feature Card */}
@@ -104,8 +104,8 @@ const FeatureCard = () => {
                     src="/assets/feature-card.png"
                     alt="Feature Card"
                     className="w-auto h-full rounded-[30px] object-cover absolute top-0 left-0 feature_card opacity-0"
-                     width={357}
-                  height={500}
+                    width={357}
+                    height={500}
                   />
 
                   {/* Icons centered halfway on bottom of feature card */}
@@ -114,22 +114,22 @@ const FeatureCard = () => {
                       src="/assets/meta-center-icon1.png"
                       alt="Icon 1"
                       className="w-12 h-12 object-contain cursor-pointer loader"
-                       width={52}
-                  height={52}
+                      width={52}
+                      height={52}
                     />
                     <Image
                       src="/assets/meta-center-icon2.png"
                       alt="Icon 2"
                       className="w-12 h-12 object-contain cursor-pointer loader"
-                       width={52}
-                  height={52}
+                      width={52}
+                      height={52}
                     />
                     <Image
                       src="/assets/meta-center-icon3.png"
                       alt="Icon 3"
                       className="w-12 h-12 object-contain cursor-pointer loader"
-                       width={52}
-                  height={52}
+                      width={52}
+                      height={52}
                     />
                   </div>
                 </div>
@@ -187,7 +187,7 @@ const FeatureCard = () => {
                   src="/assets/feature-icon3.png"
                   className="w-[150px] h-[160px] object-contain"
                   alt="wallet"
-                   width={150}
+                  width={150}
                   height={160}
                 />
               </div>

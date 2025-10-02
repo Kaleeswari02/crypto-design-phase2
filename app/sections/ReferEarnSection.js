@@ -90,7 +90,9 @@ export const ReferEarnSection = () => {
       {/* Background */}
       <Image
         src="/assets/refer-bg.png"
-        alt="Background Shadow" width={1728} height={1117}
+        alt="Background Shadow"
+        width={1728}
+        height={1117}
         className="absolute inset-0 w-full h-full"
       />
 
@@ -140,8 +142,9 @@ export const ReferEarnSection = () => {
         <div className="relative w-64 sm:w-80 md:w-[400px] z-20" ref={phoneRef}>
           <Image
             src="/assets/refer-phone.png"
-            alt="Phone with Hand" width={2472} height={4096}
-
+            alt="Phone with Hand"
+            width={2472}
+            height={4096}
             className="w-full h-auto relative z-10"
           />
           <Image
@@ -156,7 +159,7 @@ export const ReferEarnSection = () => {
             ref={(el) => (tokensRef.current[1] = el)}
             src="/assets/token.png"
             alt="Token"
-             width={197}
+            width={197}
             height={197}
             className="absolute right-[-10%] top-[55%]"
           />

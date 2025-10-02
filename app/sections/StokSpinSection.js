@@ -53,7 +53,12 @@ const CoinStokSection = () => {
                 style={{ zIndex: 25 }}
               >
                 <div className="rounded-full stockCoinShape flex center-coin">
-                  <Image src="/assets/stok.webp" alt="stok" width={442} height={547}/>
+                  <Image
+                    src="/assets/stok.webp"
+                    alt="stok"
+                    width={442}
+                    height={547}
+                  />
                 </div>
               </div>
 
@@ -80,7 +85,12 @@ const CoinStokSection = () => {
                     }}
                   >
                     <div className="flex items-center justify-center">
-                      <Image src={coin.image} alt="rotatingcoin"  width={163} height={163}/>
+                      <Image
+                        src={coin.image}
+                        alt="rotatingcoin"
+                        width={163}
+                        height={163}
+                      />
                     </div>
                   </div>
                 );
@@ -92,7 +102,12 @@ const CoinStokSection = () => {
           <div className="flex flex-col justify-center items-center w-full h-full">
             {/* Heading */}
             <div className="stockheadpart mb-5">
-              <Image src="/assets/stockheading.webp" alt="stock heading"  width={567} height={207} />
+              <Image
+                src="/assets/stockheading.webp"
+                alt="stock heading"
+                width={567}
+                height={207}
+              />
             </div>
 
             {/* Description */}
@@ -106,7 +121,12 @@ const CoinStokSection = () => {
               {/* Play Icon */}
               <div className="text-center">
                 <div className="rounded-full flex items-center justify-center mb-2">
-                  <Image src="/assets/stok-play-icon.png" alt="play"   width={106} height={106}/>
+                  <Image
+                    src="/assets/stok-play-icon.png"
+                    alt="play"
+                    width={106}
+                    height={106}
+                  />
                 </div>
                 <p className="text-gray-400 text-sm icontextfont">PLAY</p>
               </div>
@@ -114,7 +134,12 @@ const CoinStokSection = () => {
               {/* Run Icon */}
               <div className="text-center">
                 <div className="rounded-full flex items-center justify-center mb-2">
-                  <Image src="/assets/stok-run-icon.png" alt="run"  width={106} height={106}/>
+                  <Image
+                    src="/assets/stok-run-icon.png"
+                    alt="run"
+                    width={106}
+                    height={106}
+                  />
                 </div>
                 <p className="text-gray-400 text-sm icontextfont">RUN</p>
               </div>
@@ -122,7 +147,12 @@ const CoinStokSection = () => {
               {/* Earn Icon */}
               <div className="text-center">
                 <div className="rounded-full flex items-center justify-center mb-2">
-                  <Image src="/assets/stok-earn-icon.png" alt="earn"  width={106} height={106}/>
+                  <Image
+                    src="/assets/stok-earn-icon.png"
+                    alt="earn"
+                    width={106}
+                    height={106}
+                  />
                 </div>
                 <p className="text-gray-400 text-sm icontextfont">EARN</p>
               </div>
@@ -135,12 +165,22 @@ const CoinStokSection = () => {
 
             {/* Decorative Glass Square */}
             <div className="glasssquare mb-6">
-              <Image src="/assets/glasssquare.webp"  width={166} height={168} alt="glass square" />
+              <Image
+                src="/assets/glasssquare.webp"
+                width={166}
+                height={168}
+                alt="glass square"
+              />
             </div>
 
             {/* Decorative Glass Rectangle */}
             <div className="glassRec">
-              <Image src="/assets/glassrec.webp"   width={127} height={224} alt="glass rectangle" />
+              <Image
+                src="/assets/glassrec.webp"
+                width={127}
+                height={224}
+                alt="glass rectangle"
+              />
             </div>
           </div>
         </div>
