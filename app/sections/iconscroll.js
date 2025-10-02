@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Image from "next/image";
-
 
 const CoinStokSectionone = () => {
   const [mounted, setMounted] = useState(false);
@@ -25,7 +23,7 @@ const CoinStokSectionone = () => {
       <div className={`spinner-layer ${mounted ? 'animate-spin-trigger' : ''}`}>
         {/* Center Coin */}
         <div className="center-coin">
-          <Image src="/assets/stok.webp" alt="center coin" />
+          <img src="/assets/stok.webp" alt="center coin" />
         </div>
 
         {/* Orbiting Coins */}
@@ -44,7 +42,7 @@ const CoinStokSectionone = () => {
                 transform: `rotateY(${angle}deg) translateZ(${radius}px)`,
               }}
             >
-              <Image src={coin.image} alt="rotating coin" />
+              <img src={coin.image} alt="rotating coin" />
             </div>
           );
         })}

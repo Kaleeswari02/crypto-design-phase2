@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import GradientButton from '../components/GradientButton';
-import Image from "next/image";
 
 const CoinStokSection = () => {
   const [angle, setAngle] = useState(0);
@@ -36,7 +35,7 @@ const CoinStokSection = () => {
           <div className="relative flex items-center justify-center w-full h-full">
             {/* Background Overlay Image */}
             <div className="absolute inset-0">
-              <Image
+              <img
                 src="/assets/stok-bg-green-overlay.png"
                 alt="background overlay"
                 className="w-auto object-cover"
@@ -51,7 +50,7 @@ const CoinStokSection = () => {
                 style={{ zIndex: 25 }}
               >
                 <div className="rounded-full stockCoinShape flex center-coin">
-                  <Image src="/assets/stok.webp" alt="stok" />
+                  <img src="/assets/stok.webp" alt="stok" />
                 </div>
               </div>
 
@@ -78,7 +77,7 @@ const CoinStokSection = () => {
                     }}
                   >
                     <div className="w-40 h-40 flex items-center justify-center">
-                      <Image src={coin.image} alt="rotatingcoin" />
+                      <img src={coin.image} alt="rotatingcoin" />
                     </div>
                   </div>
                 );
@@ -90,7 +89,7 @@ const CoinStokSection = () => {
           <div className="flex flex-col justify-center items-center w-full h-full">
             {/* Heading */}
             <div className="stockheadpart mb-5">
-              <Image src="/assets/stockheading.webp" alt="stock heading" />
+              <img src="/assets/stockheading.webp" alt="stock heading" />
             </div>
 
             {/* Description */}
@@ -104,7 +103,7 @@ const CoinStokSection = () => {
               {/* Play Icon */}
               <div className="text-center">
                 <div className="w-auto rounded-full flex items-center justify-center mb-2">
-                  <Image src="/assets/stok-play-icon.png" alt="play" />
+                  <img src="/assets/stok-play-icon.png" alt="play" />
                 </div>
                 <p className="text-gray-400 text-sm icontextfont">PLAY</p>
               </div>
@@ -112,7 +111,7 @@ const CoinStokSection = () => {
               {/* Run Icon */}
               <div className="text-center">
                 <div className="w-auto rounded-full flex items-center justify-center mb-2">
-                  <Image src="/assets/stok-run-icon.png" alt="run" />
+                  <img src="/assets/stok-run-icon.png" alt="run" />
                 </div>
                 <p className="text-gray-400 text-sm icontextfont">RUN</p>
               </div>
@@ -120,7 +119,7 @@ const CoinStokSection = () => {
               {/* Earn Icon */}
               <div className="text-center">
                 <div className="w-auto rounded-full flex items-center justify-center mb-2">
-                  <Image src="/assets/stok-earn-icon.png" alt="earn" />
+                  <img src="/assets/stok-earn-icon.png" alt="earn" />
                 </div>
                 <p className="text-gray-400 text-sm icontextfont">EARN</p>
               </div>
@@ -133,12 +132,12 @@ const CoinStokSection = () => {
 
             {/* Decorative Glass Square */}
             <div className="glasssquare mb-6">
-              <Image src="/assets/glasssquare.webp" alt="glass square" />
+              <img src="/assets/glasssquare.webp" alt="glass square" />
             </div>
 
             {/* Decorative Glass Rectangle */}
             <div className="glassRec">
-              <Image src="/assets/glassrec.webp" alt="glass rectangle" />
+              <img src="/assets/glassrec.webp" alt="glass rectangle" />
             </div>
           </div>
         </div>

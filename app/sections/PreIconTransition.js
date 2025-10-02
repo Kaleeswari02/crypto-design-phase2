@@ -154,7 +154,7 @@ const PreIconTransition = () => {
                     backgroundColor: bg.bgColor, // ✅ inline bg color
                   }}
                 >
-                  <Image
+                  <img
                     src={iconImgs[i]}
                     alt={`icon-${i}`}
                     style={{ width: 145, height: 145, objectFit: 'contain' }}

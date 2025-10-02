@@ -5,8 +5,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import blogData from '../data/blog.json';
 import { useRouter } from 'next/navigation';
-import Image from "next/image";
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -147,7 +145,7 @@ const renderCard = (card, router) => (
     onClick={() => router.push('/blog')}
     className="cursor-pointer flex bg-black rounded-[20px] overflow-hidden w-[620px] p-[12px] blog-card"
   >
-    <Image
+    <img
       src={card.image}
       className="w-[278px] h-[338px] rounded-[10px] object-cover"
     />

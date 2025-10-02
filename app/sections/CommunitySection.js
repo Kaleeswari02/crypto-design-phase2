@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import communityData from '../data/community.json';
-import Image from "next/image";
 
 // Arrow icons
 const LeftArrow = () => (
@@ -120,7 +119,7 @@ const renderCard = (card) => (
     className="flex bg-black rounded-[20px] overflow-hidden w-[620px] p-[12px]"
   >
     {/* Left image */}
-    <Image
+    <img
       src={card.image}
       className="w-[278px] h-[338px] rounded-[10px] object-cover"
     />

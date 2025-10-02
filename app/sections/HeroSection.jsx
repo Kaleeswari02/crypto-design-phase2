@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-import Image from "next/image";
-
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -89,7 +87,7 @@ export default function HeroSection() {
             >
               {/* Icon Images */}
               {iconIndex === 0 && (
-                <Image
+                <img
                   src="/assets/play.webp"
                   alt="Play"
                   className={`object-contain play-img image-center-place opacity-90 transform transition-all duration-500 ease-out ${
@@ -100,7 +98,7 @@ export default function HeroSection() {
                 />
               )}
               {iconIndex === 1 && (
-                <Image
+                <img
                   src="/assets/run.webp"
                   alt="Run"
                   className={`object-contain run-img image-center-place opacity-90 transform transition-all duration-500 ease-out ${
@@ -111,7 +109,7 @@ export default function HeroSection() {
                 />
               )}
               {iconIndex === 2 && (
-                <Image
+                <img
                   src="/assets/earn.webp"
                   alt="Earn"
                   className={`object-contain earn-img image-center-place opacity-90 transform transition-all duration-500 ease-out ${

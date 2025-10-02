@@ -3,8 +3,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import GradientButton from '../components/GradientButton';
-import Image from "next/image";
-
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -89,7 +87,7 @@ export const ReferEarnSection = () => {
    bg-lightdark text-white flex flex-col items-center justify-center overflow-hidden px-4 z-20"
     >
       {/* Background */}
-      <Image
+      <img
         src="/assets/refer-bg.png"
         alt="Background Shadow"
         className="absolute inset-0 w-full h-full"
@@ -139,18 +137,18 @@ export const ReferEarnSection = () => {
 
         {/* Phone */}
         <div className="relative w-64 sm:w-80 md:w-[400px] z-20" ref={phoneRef}>
-          <Image
+          <img
             src="/assets/refer-phone.png"
             alt="Phone with Hand"
             className="w-full h-auto relative z-10"
           />
-          <Image
+          <img
             ref={(el) => (tokensRef.current[0] = el)}
             src="/assets/token.png"
             alt="Token"
             className="absolute left-[-10%] top-[75%] w-8 sm:w-10 md:w-auto h-auto"
           />
-          <Image
+          <img
             ref={(el) => (tokensRef.current[1] = el)}
             src="/assets/token.png"
             alt="Token"

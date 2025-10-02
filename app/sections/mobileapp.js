@@ -5,7 +5,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import GradientButton from '../components/GradientButton';
 
-
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,7 +62,7 @@ export default function DownloadSection() {
       >
         {/* Phone parts stacked on top of each other */}
         {[1, 2, 3, 4, 5].map((i) => (
-          <Image
+          <img
             key={i}
             src={`/assets/phone-part-${i}.webp`}
             alt={`phone-part-${i}`}

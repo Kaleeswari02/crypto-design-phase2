@@ -1,6 +1,5 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import Image from "next/image";
 
 const CoinStokSection = () => {
   const [mounted, setMounted] = useState(false);
@@ -40,7 +39,7 @@ const CoinStokSection = () => {
               {/* Central STOK Coin */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 centerCoinindex ">
                 <div className="rounded-full stockCoinShape flex center-coin">
-                  <Image src="/assets/stok.webp" alt="stok.webp" />
+                  <img src="/assets/stok.webp" alt="stok.webp" />
                 </div>
               </div>
 
@@ -67,7 +66,7 @@ const CoinStokSection = () => {
                     >
                       <div className="w-40 h-40 flex items-center justify-center transform hover:scale-110 transition-transform ">
                         <div className="text-white text-xl font-bold rotatingCoin">
-                          <Image
+                          <img
                             src={coin.image}
                             alt="rotatingcoin"
                             className="rotatingcoinindex  "
@@ -84,7 +83,7 @@ const CoinStokSection = () => {
           {/* Right Side - Content */}
           <div className="relative z-10 rightSidecontent">
             <div className="stockheadpart">
-              <Image src="/assets/stockheading.webp" alt="stockheading" />
+              <img src="/assets/stockheading.webp" alt="stockheading" />
             </div>
 
             {/* Description */}
@@ -97,7 +96,7 @@ const CoinStokSection = () => {
               {/* Play Icon */}
               <div className="text-center mt-10">
                 <div className="w-16 h-16 rounded-full bg-[#28d1af] flex items-center justify-center mb-2 ">
-                  <Image
+                  <img
                     src="/assets/play.webp"
                     alt="play"
                     className="stockIconsize"
@@ -109,7 +108,7 @@ const CoinStokSection = () => {
               {/* Run Icon */}
               <div className="text-center mt-10">
                 <div className="w-16 h-16 rounded-full bg-[#7a28d3] flex items-center justify-center mb-2 ">
-                  <Image
+                  <img
                     src="/assets/run.webp"
                     alt="run"
                     className="stockIconsize"
@@ -121,7 +120,7 @@ const CoinStokSection = () => {
               {/* Earn Icon */}
               <div className="text-center mt-10">
                 <div className="w-16 h-16 rounded-full bg-[#3a9fea] flex items-center justify-center mb-2 ">
-                  <Image
+                  <img
                     src="/assets/earn.webp"
                     alt="earn"
                     className="stockIconsize"
@@ -130,7 +129,7 @@ const CoinStokSection = () => {
                 <p className="text-gray-400 text-sm icontextfont">EARN</p>
               </div>
               <div className="glasssquare mt-20">
-                <Image src="/assets/glasssquare.webp" alt="" />
+                <img src="/assets/glasssquare.webp" alt="" />
               </div>
             </div>
 
@@ -146,7 +145,7 @@ const CoinStokSection = () => {
         </div>
       </div>
       <div className="glassRec">
-        <Image src="/assets/glassrec.webp" alt="" />
+        <img src="/assets/glassrec.webp" alt="" />
       </div>
     </div>
   );

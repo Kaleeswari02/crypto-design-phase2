@@ -1,5 +1,4 @@
 'use client';
-import Image from "next/image";
 
 export default function BlogPage() {
   return (
@@ -23,7 +22,7 @@ export default function BlogPage() {
                 className="flex flex-col shrink-0 items-start text-left py-3 px-[11px] mr-[9px] rounded-md border-0"
                 onClick={() => alert('Pressed!')}
               >
-                <Image
+                <img
                   src="assets/share-icon.png"
                   className="w-14  object-fill"
                 />
@@ -32,7 +31,7 @@ export default function BlogPage() {
                 className="flex flex-col shrink-0 items-start text-left py-3 px-[11px] rounded-md border-0"
                 onClick={() => alert('Pressed!')}
               >
-                <Image
+                <img
                   src="assets/copylink-icon.png"
                   className="w-14 object-fill"
                 />
@@ -41,7 +40,7 @@ export default function BlogPage() {
             <span className="text-white text-[46px] font-halbfett  w-[717px] mb-[55px] ml-[220px]">
               Lorem ipsum dolor sit amet, consectetur...
             </span>
-            <Image
+            <img
               src="assets/blog-banner.png"
               className="self-stretch h-[480px] mb-5 mx-[220px] object-fill"
             />

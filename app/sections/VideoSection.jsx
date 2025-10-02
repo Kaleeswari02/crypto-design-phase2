@@ -1,5 +1,5 @@
 'use client';
-import Image from "next/image";
+
 import React, { useRef, useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
 import Slider from 'react-slick';
@@ -123,7 +123,7 @@ export const VideoSection = () => {
               <div className="absolute inset-0 bg-black/80 z-10"></div>
 
               {/* Top-left Shadow */}
-              <Image
+              <img
                 src="/assets/left-shadow.png"
                 alt="Shadow"
                 className="absolute top-0 left-0 w-auto z-20 pointer-events-none"
@@ -142,7 +142,7 @@ export const VideoSection = () => {
                   variants={leftVariants}
                 >
                   <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-4">
-                    <Image
+                    <img
                       src={slide.icon}
                       alt="Slide icon"
                       className="w-10 sm:w-12 md:w-auto object-contain"
@@ -171,7 +171,7 @@ export const VideoSection = () => {
 
                 {/* Middle - Phone */}
                 <div className="flex-[1] flex justify-center items-center">
-                  <Image
+                  <img
                     src={slide.phone}
                     alt="Phone mockup"
                     className="w-[220px] sm:w-[280px] md:w-[360px] lg:w-[420px] xl:w-auto object-contain"

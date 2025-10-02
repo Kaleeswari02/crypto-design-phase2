@@ -2,8 +2,6 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import Image from "next/image";
-
 
 const icons = [
   { id: 1, label: 'Home', icon: '/assets/home.webp', bg: '#14f195' },
@@ -73,7 +71,7 @@ export default function FooterIcons() {
               className="w-16 h-16 rounded-full flex items-center justify-center text-black transform transition-all duration-250 group-hover:scale-90"
               style={{ backgroundColor: it.bg }}
             >
-              <Image src={it.icon} alt={it.label} />
+              <img src={it.icon} alt={it.label} />
             </div>
 
             {/* Label */}
