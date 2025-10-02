@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    output: 'export', // enables static export to 'out/'
+
   experimental: {
     appDir: true,
   },
   images: {
-    domains: ['images.unsplash.com'],
+    unoptimized: true,  // 🚀 disables optimization for static export
   },
    eslint: {
     ignoreDuringBuilds: true,

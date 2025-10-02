@@ -177,8 +177,8 @@ npm run format:check # Check code formatting
 
 ### Example
 
-- `GET /api/hello` - Example GET endpoint
-- `POST /api/hello` - Example POST endpoint
+<!-- - `GET /api/hello` - Example GET endpoint
+- `POST /api/hello` - Example POST endpoint -->
 
 ## 🔒 Environment Variables
 
