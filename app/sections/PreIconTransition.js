@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -154,9 +154,11 @@ const PreIconTransition = () => {
                     backgroundColor: bg.bgColor, // ✅ inline bg color
                   }}
                 >
-                  <img
+                  <Image
                     src={iconImgs[i]}
                     alt={`icon-${i}`}
+                    height={145}
+                    width={145}
                     style={{ width: 145, height: 145, objectFit: 'contain' }}
                     className="TransformIcon"
                   />

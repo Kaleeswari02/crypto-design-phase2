@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -154,9 +155,10 @@ export default function FitnessAndIconsPage() {
         >
           {/* Mobile image */}
           <div className="mobile relative z-10">
-            <img
+            <Image
               src="/assets/iPhone 16.webp"
               alt="Mobile App"
+              width={500} height={755}
               className="w-[500px] drop-shadow-2xl"
             />
           </div>
@@ -201,9 +203,11 @@ export default function FitnessAndIconsPage() {
                   }`}
                   style={{ backgroundColor: item.bgColor }}
                 >
-                  <img
+                  <Image
                     src={item.img}
                     alt={item.alt}
+                    width={288}
+                    height={288}
                     className={`object-contain opacity-90 transform transition-all duration-500 ease-out ${
                       hoveredIndex === iconIndex
                         ? 'translate-y-0 opacity-100'

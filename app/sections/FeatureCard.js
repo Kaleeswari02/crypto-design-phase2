@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react';
 import Tilt from 'react-parallax-tilt';
 import { CardAnimation } from './animations/CardAnimation';
 import { CardHoverAnimation } from './animations/CardHoverAnimation';
-
+import Image from 'next/image';
 const FeatureCard = () => {
   useGSAP(() => {
     CardAnimation();
@@ -33,10 +33,12 @@ const FeatureCard = () => {
                 Stake your SROK coin to <br /> receive passive income.
               </span>
               <div className="flex justify-end">
-                <img
+                <Image
                   src="/assets/feature-icon1.png"
                   className="w-[150px] h-[164px] object-contain"
                   alt="staking"
+                   width={150}
+                  height={164}
                 />
               </div>
             </div>
@@ -58,10 +60,12 @@ const FeatureCard = () => {
                 <br /> Web3 solutions.
               </span>
               <div className="flex justify-end">
-                <img
+                <Image
                   src="/assets/feature-icon2.png"
                   className="w-[150px] h-[164px] object-contain"
                   alt="staking"
+                  width={150}
+                  height={164}
                 />
               </div>
             </div>
@@ -87,35 +91,45 @@ const FeatureCard = () => {
               <div className="flex justify-center relative">
                 <div className="rounded-lg overflow-hidden card_component relative h-[500px] ">
                   {/* Purple Card */}
-                  <img
+                  <Image
                     src="/assets/purple-card.png"
                     alt="Purple Card"
                     className="w-auto h-full  object-cover purple_card rounded-[30px] "
+                     width={357}
+                  height={500}
                   />
 
                   {/* Feature Card */}
-                  <img
+                  <Image
                     src="/assets/feature-card.png"
                     alt="Feature Card"
                     className="w-auto h-full rounded-[30px] object-cover absolute top-0 left-0 feature_card opacity-0"
+                     width={357}
+                  height={500}
                   />
 
                   {/* Icons centered halfway on bottom of feature card */}
                   <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/5 flex gap-6 z-10 ">
-                    <img
+                    <Image
                       src="/assets/meta-center-icon1.png"
                       alt="Icon 1"
                       className="w-12 h-12 object-contain cursor-pointer loader"
+                       width={52}
+                  height={52}
                     />
-                    <img
+                    <Image
                       src="/assets/meta-center-icon2.png"
                       alt="Icon 2"
                       className="w-12 h-12 object-contain cursor-pointer loader"
+                       width={52}
+                  height={52}
                     />
-                    <img
+                    <Image
                       src="/assets/meta-center-icon3.png"
                       alt="Icon 3"
                       className="w-12 h-12 object-contain cursor-pointer loader"
+                       width={52}
+                  height={52}
                     />
                   </div>
                 </div>
@@ -143,10 +157,12 @@ const FeatureCard = () => {
                 Buy, Sell and transfer your <br /> STOK coin in wallet.
               </span>
               <div className="flex justify-end">
-                <img
+                <Image
                   src="/assets/feature-icon2.png"
                   className="w-[150px] h-[160px] object-contain"
                   alt="wallet"
+                  width={150}
+                  height={160}
                 />
               </div>
             </div>
@@ -154,11 +170,11 @@ const FeatureCard = () => {
             {/* ✅ Mini-Game Card */}
             <div
               className="
-        relative flex flex-col bg-[#D1FFC4] rounded-[32px] p-8 
-        overflow-hidden
-        max-h-[220px] hover:max-h-[400px]
-        transition-all duration-500 ease-in-out
-      "
+                relative flex flex-col bg-[#D1FFC4] rounded-[32px] p-8 
+                overflow-hidden
+                max-h-[220px] hover:max-h-[400px]
+                transition-all duration-500 ease-in-out
+              "
             >
               <span className="text-[#1E1E1E] text-[28px] mb-3.5 font-extrafett">
                 Mini-Game
@@ -167,10 +183,12 @@ const FeatureCard = () => {
                 Play mini-game and get exclusive rewards.
               </span>
               <div className="flex justify-end">
-                <img
+                <Image
                   src="/assets/feature-icon3.png"
                   className="w-[150px] h-[160px] object-contain"
                   alt="wallet"
+                   width={150}
+                  height={160}
                 />
               </div>
             </div>

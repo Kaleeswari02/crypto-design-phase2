@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import GradientButton from './GradientButton'; // import reusable button
+import Image from 'next/image';
 
 export default function HeroNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,10 +12,12 @@ export default function HeroNav() {
       <div className="flex justify-between items-center px-6 py-6 md:justify-center">
         {/* Left: Logo + Links inside pill */}
         <div className="flex items-center bg-black py-2 px-4 md:py-3 md:px-5 lg:py-4 lg:px-6 rounded-full border-2 border-[#2D2D2D]">
-          <img
-            src="assets/logo.webp"
-            className="w-[120px] md:w-[160px] lg:w-[196px] h-[28px] md:h-[30px] object-contain miniTablet:w-[120px]"
+         <Image
+            src="/assets/logo.webp"   
             alt="Logo"
+            width={120}
+            height={28}
+            className="w-[120px] md:w-[160px] lg:w-[196px] h-[28px] md:h-[30px] object-contain miniTablet:w-[120px]"
           />
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8 font-dreiviertelfett text-[16px] miniTablet:text-[12px] font-[700] ml-8">

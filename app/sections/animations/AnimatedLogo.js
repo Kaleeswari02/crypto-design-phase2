@@ -24,26 +24,26 @@ const AnimatedLogo = () => {
                   x2="100%"
                   y2="0%"
                 >
-                  <stop offset="0%" stopColor="#7928D2">
+                  <stop offset="0%" stopColor="#a2a2a2">
                     <animate
                       attributeName="stopColor"
-                      values="#7928D2;#399FE9;#14F195;#7928D2"
+                      values="#a2a2a2;#a2a2a2;#a2a2a2;#a2a2a2"
                       dur="3s"
                       repeatCount="indefinite"
                     />
                   </stop>
-                  <stop offset="50%" stopColor="#399FE9">
+                  <stop offset="50%" stopColor="#a2a2a2">
                     <animate
                       attributeName="stopColor"
-                      values="#399FE9;#14F195;#7928D2;#399FE9"
+                      values="#a2a2a2;#a2a2a2;#a2a2a2;#a2a2a2"
                       dur="3s"
                       repeatCount="indefinite"
                     />
                   </stop>
-                  <stop offset="100%" stopColor="#14F195">
+                  <stop offset="100%" stopColor="#a2a2a2">
                     <animate
                       attributeName="stopColor"
-                      values="#14F195;#7928D2;#399FE9;#14F195"
+                      values="#a2a2a2;#a2a2a2;#a2a2a2;#a2a2a2"
                       dur="3s"
                       repeatCount="indefinite"
                     />
@@ -58,9 +58,9 @@ const AnimatedLogo = () => {
                   x2="100%"
                   y2="0%"
                 >
-                  <stop offset="0%" stopColor="#7928D2" />
-                  <stop offset="50%" stopColor="#399FE9" />
-                  <stop offset="100%" stopColor="#14F195" />
+                  <stop offset="0%" stopColor="#a2a2a2" />
+                  <stop offset="50%" stopColor="#a2a2a2" />
+                  <stop offset="100%" stopColor="#a2a2a2" />
                 </linearGradient>
               </defs>
 

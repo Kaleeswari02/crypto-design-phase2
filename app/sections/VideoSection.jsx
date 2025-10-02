@@ -8,6 +8,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -123,10 +124,12 @@ export const VideoSection = () => {
               <div className="absolute inset-0 bg-black/80 z-10"></div>
 
               {/* Top-left Shadow */}
-              <img
+              <Image
                 src="/assets/left-shadow.png"
                 alt="Shadow"
-                className="absolute top-0 left-0 w-auto z-20 pointer-events-none"
+               width={671}
+               height={646}
+                className="absolute top-0 left-0 z-20 pointer-events-none"
               />
 
               {/* Section Content */}
@@ -142,12 +145,14 @@ export const VideoSection = () => {
                   variants={leftVariants}
                 >
                   <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-4">
-                    <img
-                      src={slide.icon}
-                      alt="Slide icon"
-                      className="w-10 sm:w-12 md:w-auto object-contain"
-                    />
-                    <div className="flex flex-col space-y-4">
+                   <Image
+                    src={slide.icon}
+                    alt="Slide icon"
+                    width={86}   // required numeric value
+                    height={86}  // required numeric value
+                    className="w-[86px] object-contain"
+                  />
+                                      <div className="flex flex-col space-y-4">
                       <h2 className="text-[18px] sm:text-[20px] md:text-[20px] font-dreiviertelfett leading-snug">
                         {slide.title}
                       </h2>
@@ -171,10 +176,12 @@ export const VideoSection = () => {
 
                 {/* Middle - Phone */}
                 <div className="flex-[1] flex justify-center items-center">
-                  <img
+                  <Image
                     src={slide.phone}
                     alt="Phone mockup"
-                    className="w-[220px] sm:w-[280px] md:w-[360px] lg:w-[420px] xl:w-auto object-contain"
+                    width={386}
+                      height={563}
+                    className="w-[220px] sm:w-[280px] md:w-[360px] lg:w-[420px]  object-contain"
                   />
                 </div>
 

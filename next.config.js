@@ -4,19 +4,8 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    unoptimized: true,
+    domains: ['images.unsplash.com'],
   },
-
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'lh3.googleusercontent.com',
-      },
-    ],
-  },
-  output: 'export' 
 };
 
 module.exports = nextConfig;
-

@@ -62,7 +62,7 @@ export default function DownloadSection() {
       >
         {/* Phone parts stacked on top of each other */}
         {[1, 2, 3, 4, 5].map((i) => (
-          <img
+          <Image
             key={i}
             src={`/assets/phone-part-${i}.webp`}
             alt={`phone-part-${i}`}
