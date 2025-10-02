@@ -151,6 +151,7 @@ const renderCard = (card, router) => (
       width={278}
       height={338}
       className="w-[278px] h-[338px] rounded-[10px] object-cover"
+      alt='card-image'
     />
     <div className="flex flex-col gap-4 justify-between w-full p-[14px]">
       <div>

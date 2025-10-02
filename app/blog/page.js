@@ -30,6 +30,7 @@ export default function BlogPage() {
                   className="w-14  object-fill"
                   width={48}
                   height={48}
+                  alt='share-icon'
                 />
               </button>
               <button
@@ -39,6 +40,7 @@ export default function BlogPage() {
                 <Image
                   src="/assets/copylink-icon.png"
                   className="w-14 object-fill"
+                  alt='copylink-icon'
                   width={48}
                   height={48}
                 />
@@ -50,6 +52,7 @@ export default function BlogPage() {
             <Image
               width={1100}
               height={480}
+              alt='blog-banner'
               src="/assets/blog-banner.png"
               className="self-stretch h-[480px] mb-5 mx-[220px] object-fill"
             />

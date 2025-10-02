@@ -123,6 +123,7 @@ const renderCard = (card) => (
       src={card.image}
       width={278}
       height={338}
+      alt='card-image'
       className="w-[278px] h-[338px] rounded-[10px] object-cover"
     />
 
