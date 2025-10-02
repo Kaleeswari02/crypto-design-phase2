@@ -10,10 +10,13 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "postbuild": "netlify-next build"
+
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@netlify/next": "^1.4.9",
     "@reduxjs/toolkit": "^2.2.1",
     "bcryptjs": "^2.4.3",
     "framer-motion": "^12.23.12",
