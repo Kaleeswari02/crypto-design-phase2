@@ -1,11 +1,11 @@
 // components/GradientButton.jsx
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 
-export default function GradientButton({ 
-  label = "Click Me", 
-  onClick, 
-  className = "" 
+export default function GradientButton({
+  label = 'Click Me',
+  onClick,
+  className = '',
 }) {
   return (
     <button

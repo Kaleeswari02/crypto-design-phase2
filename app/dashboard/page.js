@@ -154,9 +154,7 @@ export default function Dashboard() {
                   <div className="w-2 h-2 bg-yellow-600 rounded-full"></div>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm text-gray-900">
-                    New feature released
-                  </p>
+                  <p className="text-sm text-gray-900">New feature released</p>
                   <p className="text-xs text-gray-500">3 hours ago</p>
                 </div>
               </div>
@@ -176,15 +174,21 @@ export default function Dashboard() {
                 <dd className="mt-1 text-sm text-gray-900">{user?.name}</dd>
               </div>
               <div>
-                <dt className="text-sm font-medium text-gray-500">Email address</dt>
+                <dt className="text-sm font-medium text-gray-500">
+                  Email address
+                </dt>
                 <dd className="mt-1 text-sm text-gray-900">{user?.email}</dd>
               </div>
               <div>
-                <dt className="text-sm font-medium text-gray-500">Account type</dt>
+                <dt className="text-sm font-medium text-gray-500">
+                  Account type
+                </dt>
                 <dd className="mt-1 text-sm text-gray-900">Standard</dd>
               </div>
               <div>
-                <dt className="text-sm font-medium text-gray-500">Member since</dt>
+                <dt className="text-sm font-medium text-gray-500">
+                  Member since
+                </dt>
                 <dd className="mt-1 text-sm text-gray-900">
                   {new Date().toLocaleDateString()}
                 </dd>

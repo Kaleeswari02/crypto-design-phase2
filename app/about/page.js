@@ -37,7 +37,9 @@ export default function About() {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                <span className="text-gray-700">Next.js 15 with App Router</span>
+                <span className="text-gray-700">
+                  Next.js 15 with App Router
+                </span>
               </li>
               <li className="flex items-center">
                 <svg
@@ -85,7 +87,9 @@ export default function About() {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                <span className="text-gray-700">Redux Toolkit for state management</span>
+                <span className="text-gray-700">
+                  Redux Toolkit for state management
+                </span>
               </li>
               <li className="flex items-center">
                 <svg
@@ -112,7 +116,9 @@ export default function About() {
             <div className="bg-gray-900 rounded-lg p-4 text-green-400 font-mono text-sm">
               <div>npm install</div>
               <div>npm run dev</div>
-              <div className="text-gray-400 mt-2"># Open http://localhost:3000</div>
+              <div className="text-gray-400 mt-2">
+                # Open http://localhost:3000
+              </div>
             </div>
           </div>
         </div>
@@ -140,7 +146,8 @@ export default function About() {
               </div>
               <h3 className="text-lg font-semibold mb-2">Authentication</h3>
               <p className="text-gray-600">
-                Complete JWT-based authentication system with login, register, and protected routes.
+                Complete JWT-based authentication system with login, register,
+                and protected routes.
               </p>
             </div>
 

@@ -1,13 +1,13 @@
-import { useState, useRef, useEffect } from "react";
-import BlogSection from "./BlogSection";
-import CommunitySection from "./CommunitySection";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useState, useRef, useEffect } from 'react';
+import BlogSection from './BlogSection';
+import CommunitySection from './CommunitySection';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const BlogCommunityTabs = () => {
-  const [activeTab, setActiveTab] = useState("blog");
+  const [activeTab, setActiveTab] = useState('blog');
   const containerRef = useRef(null);
   const tabsRef = useRef(null);
   const bgTextRef = useRef(null);
@@ -20,13 +20,13 @@ const BlogCommunityTabs = () => {
       gsap.from(tabsRef.current, {
         x: -50,
         opacity: 0,
-        duration: 4,        // Slower
-        ease: "power2.out",
+        duration: 4, // Slower
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 95%",
-          end: "top 65%",   // Slower reveal
-          scrub: 2,         // Slower scrub
+          start: 'top 95%',
+          end: 'top 65%', // Slower reveal
+          scrub: 2, // Slower scrub
         },
       });
 
@@ -37,29 +37,29 @@ const BlogCommunityTabs = () => {
         {
           x: 0,
           opacity: 1,
-          duration: 5,      // Slower
-          ease: "power3.out",
+          duration: 5, // Slower
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top 90%",
-            end: "top 50%",
-            scrub: 2.5,      // Slower scrub
+            start: 'top 90%',
+            end: 'top 50%',
+            scrub: 2.5, // Slower scrub
           },
         }
       );
 
       // Animate Blog button (slower left-to-right)
       gsap.from(blogButtonRef.current, {
-        x: -150,             // Slide from further left
+        x: -150, // Slide from further left
         opacity: 0,
-        duration: 2.5,       // Slower
-        delay: 0.5,          // Slight delay for sequential effect
-        ease: "power3.out",
+        duration: 2.5, // Slower
+        delay: 0.5, // Slight delay for sequential effect
+        ease: 'power3.out',
         scrollTrigger: {
           trigger: tabsRef.current,
-          start: "top 90%",
-          end: "top 70%",
-          scrub: 2,           // Slower
+          start: 'top 90%',
+          end: 'top 70%',
+          scrub: 2, // Slower
         },
       });
 
@@ -67,14 +67,14 @@ const BlogCommunityTabs = () => {
       gsap.from(communityButtonRef.current, {
         x: -150,
         opacity: 0,
-        duration: 2.8,       // Slower
-        delay: 0.7,          // Slight delay after Blog button
-        ease: "power3.out",
+        duration: 2.8, // Slower
+        delay: 0.7, // Slight delay after Blog button
+        ease: 'power3.out',
         scrollTrigger: {
           trigger: tabsRef.current,
-          start: "top 90%",
-          end: "top 70%",
-          scrub: 2,           // Slower
+          start: 'top 90%',
+          end: 'top 70%',
+          scrub: 2, // Slower
         },
       });
     }, containerRef);
@@ -83,7 +83,10 @@ const BlogCommunityTabs = () => {
   }, [activeTab]);
 
   return (
-    <div ref={containerRef} className="relative flex flex-col bg-lightdark min-h-screen">
+    <div
+      ref={containerRef}
+      className="relative flex flex-col bg-lightdark min-h-screen"
+    >
       {/* Background blog text */}
       <div
         ref={bgTextRef}
@@ -99,9 +102,11 @@ const BlogCommunityTabs = () => {
         <button
           ref={blogButtonRef}
           className={`px-6 py-2 rounded-full font-dreiviertelfett transition-colors ${
-            activeTab === "blog" ? "bg-activegreen text-white" : "bg-black text-white"
+            activeTab === 'blog'
+              ? 'bg-activegreen text-white'
+              : 'bg-black text-white'
           }`}
-          onClick={() => setActiveTab("blog")}
+          onClick={() => setActiveTab('blog')}
         >
           Blog
         </button>
@@ -113,9 +118,11 @@ const BlogCommunityTabs = () => {
         <button
           ref={communityButtonRef}
           className={`px-6 py-2 rounded-full font-dreiviertelfett transition-colors ${
-            activeTab === "community" ? "bg-activegreen text-white" : "bg-black text-white"
+            activeTab === 'community'
+              ? 'bg-activegreen text-white'
+              : 'bg-black text-white'
           }`}
-          onClick={() => setActiveTab("community")}
+          onClick={() => setActiveTab('community')}
         >
           Community
         </button>
@@ -123,7 +130,7 @@ const BlogCommunityTabs = () => {
 
       {/* Content */}
       <div className="flex-1 overflow-auto relative z-10">
-        {activeTab === "blog" ? <BlogSection /> : <CommunitySection />}
+        {activeTab === 'blog' ? <BlogSection /> : <CommunitySection />}
       </div>
     </div>
   );

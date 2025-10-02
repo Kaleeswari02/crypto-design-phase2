@@ -14,7 +14,9 @@ export default function Login() {
 
   const dispatch = useDispatch();
   const router = useRouter();
-  const { loading, error, isAuthenticated } = useSelector((state) => state.auth);
+  const { loading, error, isAuthenticated } = useSelector(
+    (state) => state.auth
+  );
 
   useEffect(() => {
     if (isAuthenticated) {

@@ -23,12 +23,14 @@ A complete, production-ready Next.js boilerplate with authentication, state mana
 ## 🛠️ Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone <your-repo-url>
    cd nextjs-boilerplate
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    # or
@@ -36,16 +38,19 @@ A complete, production-ready Next.js boilerplate with authentication, state mana
    ```
 
 3. **Set up environment variables**
+
    ```bash
    cp env.example .env.local
    ```
-   
+
    Edit `.env.local` and add your configuration:
+
    ```env
    JWT_SECRET=your-super-secret-jwt-key-here
    ```
 
 4. **Run the development server**
+
    ```bash
    npm run dev
    # or
@@ -95,10 +100,12 @@ nextjs-boilerplate/
 The boilerplate includes a complete JWT-based authentication system:
 
 ### Demo Credentials
+
 - **Email:** admin@example.com
 - **Password:** password123
 
 ### Features
+
 - User registration and login
 - JWT token management
 - Protected routes
@@ -106,6 +113,7 @@ The boilerplate includes a complete JWT-based authentication system:
 - Secure password hashing with bcrypt
 
 ### Usage
+
 ```javascript
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser, logoutUser } from './store/slices/authSlice';
@@ -117,7 +125,7 @@ dispatch(loginUser({ email, password }));
 dispatch(logoutUser());
 
 // Check authentication status
-const { isAuthenticated, user } = useSelector(state => state.auth);
+const { isAuthenticated, user } = useSelector((state) => state.auth);
 ```
 
 ## 🎨 Styling
@@ -125,17 +133,20 @@ const { isAuthenticated, user } = useSelector(state => state.auth);
 The project uses Tailwind CSS with custom configuration:
 
 ### Custom Classes
+
 - `.btn-primary` - Primary button style
 - `.btn-secondary` - Secondary button style
 - `.card` - Card component style
 
 ### Color Palette
+
 - Primary: Blue shades (50-900)
 - Custom colors defined in `tailwind.config.js`
 
 ## 📱 Responsive Design
 
 The application is fully responsive with:
+
 - Mobile-first approach
 - Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px)
 - Flexible grid layouts
@@ -159,11 +170,13 @@ npm run format:check # Check code formatting
 ## 🌐 API Routes
 
 ### Authentication
+
 - `POST /api/auth/login` - User login
 - `POST /api/auth/register` - User registration
 - `POST /api/auth/logout` - User logout
 
 ### Example
+
 - `GET /api/hello` - Example GET endpoint
 - `POST /api/hello` - Example POST endpoint
 
@@ -178,13 +191,16 @@ JWT_SECRET=your-super-secret-jwt-key-here
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
+
 1. Push your code to GitHub
 2. Connect your repository to Vercel
 3. Add environment variables in Vercel dashboard
 4. Deploy!
 
 ### Other Platforms
+
 The app can be deployed to any platform that supports Node.js:
+
 - Netlify
 - Railway
 - Heroku
