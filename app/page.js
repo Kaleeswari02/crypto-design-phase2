@@ -28,16 +28,16 @@ export default function Home() {
         <HeroNav />
       </div>
       <HeroSection/> 
-      <StokSpinSection/>
+     
       <PreIconTransition/> 
       <VideoSection />
       <FeatureCard/>
-      {/* <FitnessAndIconsPage/> */}
+      <FitnessAndIconsPage/>
       <DownloadSection/>
-      <CoinStokSection/>
-      {/* <ReferEarnSection/>   
+      <StokSpinSection/>
+      <ReferEarnSection/>   
       <OurProductsSection/>
-      <BlogCommunityTabs/> */}
+      <BlogCommunityTabs/>
       {/* <CoinStokSectionone/> */}
       <Footer/>
       <FixedFooter/>
