@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import GradientButton from '../components/GradientButton';
+import Image from 'next/image';
 
 const CoinStokSection = () => {
   const [angle, setAngle] = useState(0);
@@ -35,10 +36,12 @@ const CoinStokSection = () => {
           <div className="relative flex items-center justify-center w-full h-full">
             {/* Background Overlay Image */}
             <div className="absolute inset-0">
-              <img
+              <Image
                 src="/assets/stok-bg-green-overlay.png"
                 alt="background overlay"
-                className="w-auto object-cover"
+                className="bject-cover"
+                height={1096}
+                width={1011}
               />
             </div>
 
@@ -50,7 +53,12 @@ const CoinStokSection = () => {
                 style={{ zIndex: 25 }}
               >
                 <div className="rounded-full stockCoinShape flex center-coin">
-                  <img src="/assets/stok.webp" alt="stok" />
+                  <Image
+                    src="/assets/stok.webp"
+                    alt="stok"
+                    width={442}
+                    height={547}
+                  />
                 </div>
               </div>
 
@@ -76,8 +84,13 @@ const CoinStokSection = () => {
                       transition: 'transform 0.05s linear',
                     }}
                   >
-                    <div className="w-40 h-40 flex items-center justify-center">
-                      <img src={coin.image} alt="rotatingcoin" />
+                    <div className="flex items-center justify-center">
+                      <Image
+                        src={coin.image}
+                        alt="rotatingcoin"
+                        width={163}
+                        height={163}
+                      />
                     </div>
                   </div>
                 );
@@ -85,64 +98,91 @@ const CoinStokSection = () => {
             </div>
           </div>
 
-  {/* Right Side - Content */}
-<div className="flex flex-col justify-center items-center w-full h-full">
-  {/* Heading */}
-  <div className="stockheadpart mb-5">
-    <img src="/assets/stockheading.webp" alt="stock heading" />
-  </div>
+          {/* Right Side - Content */}
+          <div className="flex flex-col justify-center items-center w-full h-full">
+            {/* Heading */}
+            <div className="stockheadpart mb-5">
+              <Image
+                src="/assets/stockheading.webp"
+                alt="stock heading"
+                width={567}
+                height={207}
+              />
+            </div>
 
-  {/* Description */}
-  <p className="text-gray-400 text-center text-lg mb-8 stockDes">
-    Lorem ipsum dolor sit amet,
-    <br /> consectetur
-  </p>
+            {/* Description */}
+            <p className="text-gray-400 text-center text-lg mb-8 stockDes">
+              Lorem ipsum dolor sit amet,
+              <br /> consectetur
+            </p>
 
-  {/* Icons */}
-  <div className="grid grid-cols-3 gap-y-4 stocksmallicons mb-8">
-    {/* Play Icon */}
-    <div className="text-center">
-      <div className="w-auto rounded-full flex items-center justify-center mb-2">
-        <img src="/assets/stok-play-icon.png" alt="play" />
-      </div>
-      <p className="text-gray-400 text-sm icontextfont">PLAY</p>
-    </div>
+            {/* Icons */}
+            <div className="grid grid-cols-3 gap-y-4 stocksmallicons mb-8">
+              {/* Play Icon */}
+              <div className="text-center">
+                <div className="rounded-full flex items-center justify-center mb-2">
+                  <Image
+                    src="/assets/stok-play-icon.png"
+                    alt="play"
+                    width={106}
+                    height={106}
+                  />
+                </div>
+                <p className="text-gray-400 text-sm icontextfont">PLAY</p>
+              </div>
 
-    {/* Run Icon */}
-    <div className="text-center">
-      <div className="w-auto rounded-full flex items-center justify-center mb-2">
-        <img src="/assets/stok-run-icon.png" alt="run" />
-      </div>
-      <p className="text-gray-400 text-sm icontextfont">RUN</p>
-    </div>
+              {/* Run Icon */}
+              <div className="text-center">
+                <div className="rounded-full flex items-center justify-center mb-2">
+                  <Image
+                    src="/assets/stok-run-icon.png"
+                    alt="run"
+                    width={106}
+                    height={106}
+                  />
+                </div>
+                <p className="text-gray-400 text-sm icontextfont">RUN</p>
+              </div>
 
-    {/* Earn Icon */}
-    <div className="text-center">
-      <div className="w-auto rounded-full flex items-center justify-center mb-2">
-        <img src="/assets/stok-earn-icon.png" alt="earn" />
-      </div>
-      <p className="text-gray-400 text-sm icontextfont">EARN</p>
-    </div>
-  </div>
+              {/* Earn Icon */}
+              <div className="text-center">
+                <div className="rounded-full flex items-center justify-center mb-2">
+                  <Image
+                    src="/assets/stok-earn-icon.png"
+                    alt="earn"
+                    width={106}
+                    height={106}
+                  />
+                </div>
+                <p className="text-gray-400 text-sm icontextfont">EARN</p>
+              </div>
+            </div>
 
-  {/* Buy Button */}
-  <div className="w-full flex justify-center mb-10">
-    <GradientButton label="Buy" onClick={() => alert('Pressed!')} />
-  </div>
+            {/* Buy Button */}
+            <div className="w-full flex justify-center mb-10">
+              <GradientButton label="Buy" onClick={() => alert('Pressed!')} />
+            </div>
 
-  {/* Decorative Glass Square */}
-  <div className="glasssquare mb-6">
-    <img src="/assets/glasssquare.webp" alt="glass square" />
-  </div>
+            {/* Decorative Glass Square */}
+            <div className="glasssquare mb-6">
+              <Image
+                src="/assets/glasssquare.webp"
+                width={166}
+                height={168}
+                alt="glass square"
+              />
+            </div>
 
-  {/* Decorative Glass Rectangle */}
-  <div className="glassRec">
-    <img src="/assets/glassrec.webp" alt="glass rectangle" />
-  </div>
-</div>
-
-
-
+            {/* Decorative Glass Rectangle */}
+            <div className="glassRec">
+              <Image
+                src="/assets/glassrec.webp"
+                width={127}
+                height={224}
+                alt="glass rectangle"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

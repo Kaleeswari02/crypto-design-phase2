@@ -27,7 +27,7 @@ export default function Footer() {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-gray-700 mb-6 w-[1200px] mx-auto"></div>
+      <div className="border-t  border-gray-700 mb-6 w-[1200px] mx-auto"></div>
       <div className="mt-6 text-center text-white text-[16px] font-kraeftig mb-4">
         Join Our Community
       </div>

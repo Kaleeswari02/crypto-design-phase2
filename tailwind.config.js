@@ -10,17 +10,15 @@ module.exports = {
       colors: {
         lightdark: '#1E1E1E',
         blackish: '#2D2D2D',
-         purple:'#7928D2',
-         darkBlue:'#300064',
-         activegreen:'#14F195'
-
+        purple: '#7928D2',
+        darkBlue: '#300064',
+        activegreen: '#14F195',
       },
       backgroundImage: {
         gradientBtn:
           'linear-gradient(270deg, #7928D2 0%, #399FE9 50%, #14F195 100%)',
-       
       },
-      
+
       fontFamily: {
         dreiviertelfett: ['Dreiviertelfett', 'sans-serif'],
         extrafettkursiv: ['ExtrafettKursiv', 'sans-serif'],
@@ -36,7 +34,7 @@ module.exports = {
         'coin-shadow': '0 4px 10px rgba(0, 255, 0, 0.4)', // Greenish shadow for the center coin
       },
       animation: {
-        'spin': 'spin 10s linear infinite', // Continuous spin animation for the rotating coins
+        spin: 'spin 10s linear infinite', // Continuous spin animation for the rotating coins
       },
     },
   },

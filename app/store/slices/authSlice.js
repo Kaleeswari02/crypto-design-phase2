@@ -157,5 +157,6 @@ const authSlice = createSlice({
   },
 });
 
-export const { clearError, setCredentials, clearCredentials } = authSlice.actions;
+export const { clearError, setCredentials, clearCredentials } =
+  authSlice.actions;
 export default authSlice.reducer;

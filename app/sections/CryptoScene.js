@@ -1,7 +1,7 @@
-"use client";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Float, Html } from "@react-three/drei";
-import * as THREE from "three";
+'use client';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Float, Html } from '@react-three/drei';
+import * as THREE from 'three';
 
 function MainCoin() {
   return (
@@ -9,26 +9,22 @@ function MainCoin() {
       <mesh>
         {/* Coin base */}
         <cylinderGeometry args={[2, 2, 0.6, 64]} />
-        <meshStandardMaterial
-          color={"#111"}
-          metalness={0.7}
-          roughness={0.4}
-        />
+        <meshStandardMaterial color={'#111'} metalness={0.7} roughness={0.4} />
 
         {/* Gradient logo */}
         <mesh position={[0, 0.31, 0.01]}>
           <boxGeometry args={[1.2, 0.35, 0.1]} />
           <meshStandardMaterial
-            color={"#00f0ff"}
-            emissive={"#00ffcc"}
+            color={'#00f0ff'}
+            emissive={'#00ffcc'}
             emissiveIntensity={0.6}
           />
         </mesh>
         <mesh position={[0, -0.31, 0.01]}>
           <boxGeometry args={[1.2, 0.35, 0.1]} />
           <meshStandardMaterial
-            color={"#9b4dff"}
-            emissive={"#aa00ff"}
+            color={'#9b4dff'}
+            emissive={'#aa00ff'}
             emissiveIntensity={0.6}
           />
         </mesh>
@@ -56,11 +52,11 @@ function FloatingToken({ texture, position }) {
 export default function CryptoScene() {
   // Example textures (replace with real logos if you want)
   const loader = new THREE.TextureLoader();
-  const btc = loader.load("/btc.png");
-  const eth = loader.load("/eth.png");
-  const doge = loader.load("/doge.png");
-  const tether = loader.load("/tether.png");
-  const ada = loader.load("/ada.png");
+  const btc = loader.load('/btc.png');
+  const eth = loader.load('/eth.png');
+  const doge = loader.load('/doge.png');
+  const tether = loader.load('/tether.png');
+  const ada = loader.load('/ada.png');
 
   return (
     <div className="w-full h-screen">

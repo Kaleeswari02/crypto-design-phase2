@@ -1,14 +1,15 @@
 // app/sections/fixedfooter.js
-"use client";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
+'use client';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import Image from 'next/image';
 
 const icons = [
-  { id: 1, label: "Home", icon: "/assets/home.webp", bg: "#14f195" },
-  { id: 2, label: "Web3", icon: "/assets/web3.webp", bg: "#399fe9" },
-  { id: 3, label: "Device", icon: "/assets/device.webp", bg: "#7928d2" },
-  { id: 4, label: "Refer", icon: "/assets/refer.webp", bg: "#b4b4b4" },
-  { id: 5, label: "Web2", icon: "/assets/web2.webp", bg: "#28d2b0" },
+  { id: 1, label: 'Home', icon: '/assets/home.webp', bg: '#14f195' },
+  { id: 2, label: 'Web3', icon: '/assets/web3.webp', bg: '#399fe9' },
+  { id: 3, label: 'Device', icon: '/assets/device.webp', bg: '#7928d2' },
+  { id: 4, label: 'Refer', icon: '/assets/refer.webp', bg: '#b4b4b4' },
+  { id: 5, label: 'Web2', icon: '/assets/web2.webp', bg: '#28d2b0' },
 ];
 
 export default function FooterIcons() {
@@ -34,7 +35,7 @@ export default function FooterIcons() {
         y: 0,
         opacity: 1,
         duration: 0.5,
-        ease: "power3.out",
+        ease: 'power3.out',
       });
 
       // hide after 500ms of no scroll
@@ -43,15 +44,15 @@ export default function FooterIcons() {
           y: 100,
           opacity: 0,
           duration: 0.5,
-          ease: "power3.in",
+          ease: 'power3.in',
         });
       }, 500);
     };
 
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener('scroll', onScroll);
       if (scrollTimeoutRef.current) {
         clearTimeout(scrollTimeoutRef.current);
       }
@@ -71,7 +72,7 @@ export default function FooterIcons() {
               className="w-16 h-16 rounded-full flex items-center justify-center text-black transform transition-all duration-250 group-hover:scale-90"
               style={{ backgroundColor: it.bg }}
             >
-              <img src={it.icon} alt={it.label} />
+              <Image src={it.icon} alt={it.label} width={22} height={22} />
             </div>
 
             {/* Label */}

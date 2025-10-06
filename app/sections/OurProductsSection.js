@@ -1,8 +1,8 @@
-
-import React, { useRef,useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -12,25 +12,25 @@ export const OurProductsSection = () => {
 
   const products = [
     {
-      title: "WALKING PAD",
-      bigTitle: "WALKING PAD",
-      subtitle: "Lorem Ipsum Dolor Sit Amet, Consectetur...",
-      leftImg: "/assets/walkingpad-cover.png",
-      rightVideo: "/assets/products-video.mp4",
+      title: 'WALKING PAD',
+      bigTitle: 'WALKING PAD',
+      subtitle: 'Lorem Ipsum Dolor Sit Amet, Consectetur...',
+      leftImg: '/assets/walkingpad-cover.png',
+      rightVideo: '/assets/products-video.mp4',
     },
     {
-      title: "TREADMILL",
-      bigTitle: "TREADMILL",
-      subtitle: "Lorem Ipsum Dolor Sit Amet, Consectetur...",
-      leftImg: "/assets/treadmill-cover.png",
-      rightVideo: "/assets/products-video.mp4",
+      title: 'TREADMILL',
+      bigTitle: 'TREADMILL',
+      subtitle: 'Lorem Ipsum Dolor Sit Amet, Consectetur...',
+      leftImg: '/assets/treadmill-cover.png',
+      rightVideo: '/assets/products-video.mp4',
     },
     {
-      title: "SMART BIKE",
-      bigTitle: "SMART BIKE",
-      subtitle: "Lorem Ipsum Dolor Sit Amet, Consectetur...",
-      leftImg: "/assets/sbike-cover.png",
-      rightVideo: "/assets/products-video.mp4",
+      title: 'SMART BIKE',
+      bigTitle: 'SMART BIKE',
+      subtitle: 'Lorem Ipsum Dolor Sit Amet, Consectetur...',
+      leftImg: '/assets/sbike-cover.png',
+      rightVideo: '/assets/products-video.mp4',
     },
   ];
 
@@ -45,22 +45,22 @@ export const OurProductsSection = () => {
       // prepare inner elements and letters
       slides.forEach((slide, idx) => {
         if (!slide) return;
-        const leftCard = slide.querySelector(".left-card");
-        const rightCard = slide.querySelector(".right-card");
-        const centerHeading = slide.querySelector(".center-heading");
+        const leftCard = slide.querySelector('.left-card');
+        const rightCard = slide.querySelector('.right-card');
+        const centerHeading = slide.querySelector('.center-heading');
 
         if (leftCard) gsap.set(leftCard, { y: 100, opacity: 0 });
         if (rightCard) gsap.set(rightCard, { y: -100, opacity: 0 });
 
         // set every .letter inside centerHeading to initial rotated state
         if (centerHeading) {
-          const letters = centerHeading.querySelectorAll(".letter");
+          const letters = centerHeading.querySelectorAll('.letter');
           if (letters.length) {
             gsap.set(letters, {
               rotationX: -85,
-              transformOrigin: "bottom",
+              transformOrigin: 'bottom',
               autoAlpha: 0,
-              backfaceVisibility: "hidden",
+              backfaceVisibility: 'hidden',
             });
           } else {
             gsap.set(centerHeading, { y: 20, opacity: 0 });
@@ -71,8 +71,8 @@ export const OurProductsSection = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top top",
-          end: "+=400%",
+          start: 'top top',
+          end: '+=400%',
           scrub: 0.7,
           pin: true,
           snap: {
@@ -91,7 +91,13 @@ export const OurProductsSection = () => {
         // hide previous
         tl.to(
           slides[i - 1],
-          { autoAlpha: 0, y: -40, scale: 0.98, duration: 0.6, ease: "power1.inOut" },
+          {
+            autoAlpha: 0,
+            y: -40,
+            scale: 0.98,
+            duration: 0.6,
+            ease: 'power1.inOut',
+          },
           timePos
         );
 
@@ -99,18 +105,18 @@ export const OurProductsSection = () => {
         tl.fromTo(
           slides[i],
           { autoAlpha: 0, y: 40, scale: 0.98 },
-          { autoAlpha: 1, y: 0, scale: 1, duration: 0.6, ease: "power1.inOut" },
+          { autoAlpha: 1, y: 0, scale: 1, duration: 0.6, ease: 'power1.inOut' },
           timePos + 0.3
         );
 
         // animate product details
-        const leftCard = slide.querySelector(".left-card");
-        const rightCard = slide.querySelector(".right-card");
-        const centerHeading = slide.querySelector(".center-heading");
+        const leftCard = slide.querySelector('.left-card');
+        const rightCard = slide.querySelector('.right-card');
+        const centerHeading = slide.querySelector('.center-heading');
 
         // LETTER-BASED reveal for center title (rotateX wake-up)
         if (centerHeading) {
-          const letters = Array.from(centerHeading.querySelectorAll(".letter"));
+          const letters = Array.from(centerHeading.querySelectorAll('.letter'));
           if (letters.length) {
             // add letter animation to the same timeline so it syncs with slide timing
             tl.to(
@@ -119,19 +125,33 @@ export const OurProductsSection = () => {
                 rotationX: 0,
                 autoAlpha: 1,
                 duration: 0.6,
-                ease: "power1.out",
+                ease: 'power1.out',
                 stagger: 0.04,
-                transformOrigin: "bottom",
+                transformOrigin: 'bottom',
               },
               timePos + 0.6
             );
           } else {
-            tl.to(centerHeading, { y: 0, opacity: 1, duration: 0.6, ease: "power1.out" }, timePos + 0.6);
+            tl.to(
+              centerHeading,
+              { y: 0, opacity: 1, duration: 0.6, ease: 'power1.out' },
+              timePos + 0.6
+            );
           }
         }
 
-        if (leftCard) tl.to(leftCard, { y: 0, opacity: 1, duration: 0.6, ease: "power1.out" }, timePos + 0.6);
-        if (rightCard) tl.to(rightCard, { y: 0, opacity: 1, duration: 0.6, ease: "power1.out" }, timePos + 0.6);
+        if (leftCard)
+          tl.to(
+            leftCard,
+            { y: 0, opacity: 1, duration: 0.6, ease: 'power1.out' },
+            timePos + 0.6
+          );
+        if (rightCard)
+          tl.to(
+            rightCard,
+            { y: 0, opacity: 1, duration: 0.6, ease: 'power1.out' },
+            timePos + 0.6
+          );
       });
     },
     { scope: containerRef }
@@ -139,34 +159,71 @@ export const OurProductsSection = () => {
 
   // helper to render letters (keeps spaces as non-breaking spaces)
   const renderLetters = (text) =>
-    text.split("").map((ch, idx) => (
-      <span key={idx} className={`letter ${ch === " " ? "space" : ""}`} aria-hidden>
-        {ch === " " ? "\u00A0" : ch}
+    text.split('').map((ch, idx) => (
+      <span
+        key={idx}
+        className={`letter ${ch === ' ' ? 'space' : ''}`}
+        aria-hidden
+      >
+        {ch === ' ' ? '\u00A0' : ch}
       </span>
     ));
 
   return (
-    <div ref={containerRef} className="relative w-full h-screen bg-lightdark overflow-hidden">
+    <div
+      ref={containerRef}
+      className="relative w-full h-screen bg-lightdark overflow-hidden"
+    >
       {/* Slide 0 */}
-      <div ref={(el) => (slideRefs.current[0] = el)} className="absolute inset-0 flex flex-col items-center justify-center px-6">
+      <div
+        ref={(el) => (slideRefs.current[0] = el)}
+        className="absolute inset-0 flex flex-col items-center justify-center px-6"
+      >
         <div className="text-center mb-16 relative z-10">
-          <h2 className="text-white text-6xl sm:text-7xl font-halbfett mb-4">Our</h2>
+          <h2 className="text-white text-6xl sm:text-7xl font-halbfett mb-4">
+            Our
+          </h2>
           <h2 className="text-white text-6xl sm:text-7xl font-halbfett flex items-center justify-center gap-2">
             Web2
-            <img src="/assets/small-icon.png" alt="logo" className="w-12 inline-block" />
+            <Image
+              src="/assets/small-icon.png"
+              width={48}
+              height={48}
+              alt="logo"
+              className="inline-block"
+            />
             Products
           </h2>
         </div>
 
         <div className="relative w-full max-w-6xl flex justify-center">
-          <img src="/assets/product-bg-blur.png" alt="Cards Background" className="absolute bottom-0 left-0 w-auto object-contain pointer-events-none select-none z-0 mt-20" />
+          <Image
+            src="/assets/product-bg-blur.png"
+            alt="Cards Background"
+            width={913}
+            height={479}
+            className="absolute bottom-0 left-0 w-auto object-contain pointer-events-none select-none z-0 mt-20"
+          />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full relative z-10">
             {products.map((p, i) => (
-              <div key={i} className="relative flex flex-col items-center overflow-hidden rounded-[20px] transform transition-transform duration-500 hover:scale-105">
-                <img src={p.leftImg} alt={p.title} className="w-auto rounded-[20px]" />
+              <div
+                key={i}
+                className="relative flex flex-col items-center overflow-hidden rounded-[20px] transform transition-transform duration-500 hover:scale-105"
+              >
+                <Image
+                  src={p.leftImg}
+                  alt={p.title}
+                  width={354}
+                  height={400}
+                  className=" rounded-[20px]"
+                />
                 <div className="absolute bottom-4 w-full text-center px-6 py-4">
-                  <h3 className="text-white text-[18px] mb-2 font-halbfett">{p.title}</h3>
-                  <p className="text-white/90 text-[12px] font-buch line-clamp-4">Lorem ipsum dolor sit amet...</p>
+                  <h3 className="text-white text-[18px] mb-2 font-halbfett">
+                    {p.title}
+                  </h3>
+                  <p className="text-white/90 text-[12px] font-buch line-clamp-4">
+                    Lorem ipsum dolor sit amet...
+                  </p>
                 </div>
               </div>
             ))}
@@ -175,11 +232,21 @@ export const OurProductsSection = () => {
       </div>
 
       {/* Slides 1–3 */}
-       {products.map((p, i) => (
-        <div key={i} ref={(el) => (slideRefs.current[i + 1] = el)} className="absolute inset-0 flex items-center justify-center">
+      {products.map((p, i) => (
+        <div
+          key={i}
+          ref={(el) => (slideRefs.current[i + 1] = el)}
+          className="absolute inset-0 flex items-center justify-center"
+        >
           <div className="left-card absolute left-[5%] top-[40%] -translate-y-1/2 w-[240px] z-10">
             {/* --- left card content --- */}
-            <img src={p.leftImg} alt={p.title} className="w-full h-auto rounded-[20px]" />
+            <Image
+              src={p.leftImg}
+              alt={p.title}
+              width={354}
+              height={400}
+              className="w-full h-auto rounded-[20px]"
+            />
             <div className="absolute bottom-3 left-0 w-full text-center px-4 py-2">
               <h3 className="text-white text-[18px] mb-1 font-halbfett">
                 {p.title}
@@ -191,11 +258,21 @@ export const OurProductsSection = () => {
             <h2 className="big-title text-white text-[110px] font-[900] leading-none font-extrafett">
               {renderLetters(p.bigTitle)}
             </h2>
-            <span className="text-white text-[28px] font-kraeftig block mt-4">{p.subtitle}</span>
+            <span className="text-white text-[28px] font-kraeftig block mt-4">
+              {p.subtitle}
+            </span>
           </div>
 
           <div className="right-card absolute right-[5%] top-1/2 -translate-y-1/2 w-[240px] h-[280px] z-10">
-            <video src={p.rightVideo} poster={p.leftImg} autoPlay loop muted playsInline className="w-full h-full object-cover rounded-[20px]" />
+            <video
+              src={p.rightVideo}
+              poster={p.leftImg}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover rounded-[20px]"
+            />
           </div>
         </div>
       ))}

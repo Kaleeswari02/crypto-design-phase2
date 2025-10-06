@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,35 +53,31 @@ export default function FitnessAndIconsPage() {
           { x: -1500, opacity: 0 },
           { x: 0, opacity: 1, ease: 'power2.out', duration: 1 }
         )
-        .to(
-          '.mobile',
-          { x: 200, ease: 'power2.out', duration: 1 },
-          '<'
-        )
+        .to('.mobile', { x: 200, ease: 'power2.out', duration: 1 }, '<')
         // Second phase: First section fades out, second section fades in
         .to(
           firstSectionRef.current,
-          { 
-            opacity: 0, 
+          {
+            opacity: 0,
             scale: 0.8,
-            ease: 'power2.inOut', 
-            duration: 1 
+            ease: 'power2.inOut',
+            duration: 1,
           },
           '+=0.5'
         )
         .fromTo(
           secondSectionRef.current,
-          { 
-            opacity: 0, 
+          {
+            opacity: 0,
             scale: 1.2,
-            y: 100
+            y: 100,
           },
-          { 
-            opacity: 1, 
+          {
+            opacity: 1,
             scale: 1,
             y: 0,
-            ease: 'power2.out', 
-            duration: 1 
+            ease: 'power2.out',
+            duration: 1,
           },
           '<'
         )
@@ -98,16 +95,33 @@ export default function FitnessAndIconsPage() {
           },
           '<+0.3'
         );
-
     }, containerRef);
 
     return () => ctx.revert();
   }, []);
 
   const icons = [
-    { id: 1, bgColor: '#28d1af', img: '/assets/Tap.webp', alt: 'Tap', title: 'Tap' },
-    { id: 2, bgColor: '#ffffff', img: '/assets/move.webp', alt: 'Move', title: 'Move' },
-    { id: 3, bgColor: '#7928D2', img: '/assets/earns.webp', alt: 'Earn', title: 'Earn' },
+    {
+      id: 1,
+      bgColor: '#28d1af',
+      img: '/assets/Tap.webp',
+      alt: 'Tap',
+      title: 'Tap',
+    },
+    {
+      id: 2,
+      bgColor: '#ffffff',
+      img: '/assets/move.webp',
+      alt: 'Move',
+      title: 'Move',
+    },
+    {
+      id: 3,
+      bgColor: '#7928D2',
+      img: '/assets/earns.webp',
+      alt: 'Earn',
+      title: 'Earn',
+    },
   ];
 
   const getDropStyle = (index, isHovered) => {
@@ -141,9 +155,11 @@ export default function FitnessAndIconsPage() {
         >
           {/* Mobile image */}
           <div className="mobile relative z-10">
-            <img
+            <Image
               src="/assets/iPhone 16.webp"
               alt="Mobile App"
+              width={500}
+              height={755}
               className="w-[500px] drop-shadow-2xl"
             />
           </div>
@@ -159,8 +175,9 @@ export default function FitnessAndIconsPage() {
               </span>
             </h1>
             <p className="text-lg md:text-xl mb-8 mobile-anim-des">
-              Designed for fitness enthusiasts who<br /> want to get more out of their
-              workouts,<br /> our app rewards you with crypto every <br /> time you move.
+              Designed for fitness enthusiasts who
+              <br /> want to get more out of their workouts,
+              <br /> our app rewards you with crypto every <br /> time you move.
             </p>
           </div>
         </div>
@@ -187,9 +204,11 @@ export default function FitnessAndIconsPage() {
                   }`}
                   style={{ backgroundColor: item.bgColor }}
                 >
-                  <img
+                  <Image
                     src={item.img}
                     alt={item.alt}
+                    width={288}
+                    height={288}
                     className={`object-contain opacity-90 transform transition-all duration-500 ease-out ${
                       hoveredIndex === iconIndex
                         ? 'translate-y-0 opacity-100'
@@ -197,7 +216,7 @@ export default function FitnessAndIconsPage() {
                     }`}
                   />
                 </div>
-                <p className='tmeSection text-white text-center mt-4 text-xl font-semibold'>
+                <p className="tmeSection text-white text-center mt-4 text-xl font-semibold">
                   {item.title}
                 </p>
 
@@ -234,7 +253,6 @@ export default function FitnessAndIconsPage() {
       </section>
 
       {/* Add some content after to allow for normal scrolling */}
-      
 
       {/* <style jsx>{`
         @keyframes dropBurst {
