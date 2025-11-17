@@ -6,12 +6,16 @@ import GradientButton from './GradientButton';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { RiTelegramFill } from 'react-icons/ri';
 import AnimatedLogo from '../sections/animations/AnimatedLogo';
+import Image from 'next/image';
+import FooterLogoSection from '../sections/animations/FooterLogoSection'
 
 export default function Footer() {
+
+
   return (
     <footer className="bg-[#1E1E1E] text-white py-12 px-6">
       {/* Logo / Title Section */}
-      <AnimatedLogo />
+ <FooterLogoSection/>
 
       {/* CTA Buttons */}
       <div className="flex justify-center gap-6 mb-16">
